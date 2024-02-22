@@ -421,6 +421,11 @@ section {
   gap: 12px;
 }
 
+.join {
+  display: flex;
+  gap: 8px;
+}
+
 .kebab {
   width: 12px;
   aspect-ratio: 12/10;
@@ -544,6 +549,32 @@ section {
 
 .select-folder-btn {
   border: 1px solid var(--primary-color);
+}
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sign-logo {
+  width: 210px;
+  height: 38px;
+}
+
+.sign-up-link {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration-line: underline;
 }
 
 .share-bg {
