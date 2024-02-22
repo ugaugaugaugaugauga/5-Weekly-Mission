@@ -60,6 +60,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  align-items: center;
 }
 
 h3 {
@@ -643,6 +644,7 @@ section {
 /*====================================           ID          ==================================*/
 
 #link-add {
+  margin-top: 40px;
   width: 350px;
 }
 
