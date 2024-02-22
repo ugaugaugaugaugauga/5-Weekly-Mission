@@ -559,6 +559,13 @@ section {
   align-items: center;
   gap: 10px;
 }
+.share-link-btn a img {
+  border-radius: 50%;
+}
+
+.share-link-btn a img:hover {
+  box-shadow: 0 0 10px var(--skyblue-color);
+}
 
 .share-link-logo {
   width: 42px;
