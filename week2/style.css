@@ -86,7 +86,7 @@ input {
 
 main {
   height: 100%;
-  padding: 70px 360px 0;
+  padding: 70px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +100,8 @@ p {
 
 section {
   margin-top: 0;
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   padding: 50px 461px;
   background-color: var(--white-color);
 }
@@ -623,7 +624,8 @@ section {
   background-image: url("img/_dim.png");
   background-repeat: no-repeat;
   background-position: top center;
-  width: 1920px;
+  max-width: 1920px;
+  width: 100vh;
   height: 953px;
   display: flex;
   flex-direction: column;
@@ -633,11 +635,12 @@ section {
 
 #s2 {
   background-color: var(--white-color);
-  width: 1920px;
+  max-width: 1920px;
   margin: -400px 0 0;
-  padding: 120px 461px 50px;
+  padding: 120px 0px 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 100px;
   flex: 1;
   height: 9000px;
