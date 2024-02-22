@@ -50,7 +50,7 @@ button {
 button:hover {
   cursor: pointer;
   filter: brightness(1.2);
-  scale: 1.1;
+  scale: 1.02;
 }
 
 footer {
@@ -309,6 +309,9 @@ section {
 
 .eye-btn {
   background-color: inherit;
+  position: absolute;
+  right: 10px;
+  top: 15px;
 }
 
 .eye-btn:hover .eye-on {
@@ -435,9 +438,20 @@ section {
   -webkit-text-fill-color: transparent;
 }
 
+.img-border {
+  border: 2px solid var(--d3-gray-color);
+  border-radius: 50%;
+}
+
 .info-link-bar ul {
   list-style: none;
   display: flex;
+  gap: 12px;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
@@ -471,6 +485,19 @@ section {
   gap: 20px;
 }
 
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.login-btn {
+  width: 100%;
+  position: relative;
+  top: 6px;
+}
+
 .logo {
   width: 150px;
   height: 24px;
@@ -488,6 +515,19 @@ section {
   font-weight: 700;
   line-height: normal;
 }
+
+.other-id {
+  background-color: var(--d2-gray-color);
+  display: flex;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 1px solid var(--Linkbrary-gray20, #ccd5e3);
+  background: var(--Linkbrary-gray10, #e7effb);
+}
+
 .policy-bar {
   display: flex;
   gap: 30px;
@@ -502,6 +542,10 @@ section {
 
 .purple-star {
   display: none;
+}
+
+.pw-input {
+  position: relative;
 }
 
 .save-icon {
@@ -576,11 +620,29 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 30px;
+}
+
+.sign-input {
+  display: flex;
+  width: 400px;
+  padding: 18px 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--Linkbrary-gray20, #ccd5e3);
+  background: var(--Linkbrary-white, #fff);
 }
 
 .sign-in-form {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  align-items: center;
 }
 
 .sign-in-top {
@@ -649,6 +711,11 @@ section {
   gap: 10px;
   margin: 0;
   padding: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
 }
 
 .svg-change {

@@ -20,23 +20,43 @@
                     <span>회원이 아니신가요?</span>
                     <a href="/signup.html" class="sign-up-link">회원 가입하기</a>
                 </div>
+            </div>
 
-                <form action="/signin.html" method="post" class="sign-in-form">
+            <form action="/signin.html" method="post" class="sign-in-form">
+                <div class="input-label">
                     <label for="username">이메일</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="email" id="username" name="username" required class="sign-input">
+                </div>
 
+                <div class="input-label">
                     <label for="password">비밀번호</label>
                     <div class="pw-input">
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password" required class="sign-input">
                         <button class="eye-btn">
                             <img src="img/eye-on.svg" alt="" class="eye-on">
                         </button>
+                    </div>
+                </div>
 
+            </form>
+            <div class="login">
+                <button class="btn login-btn">로그인</button>
+
+                <div class="other-id">
+                    <div>
+                        소셜 로그인
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.google.com/" target="_blank"><img src="img/google.svg" alt=""></a>
+                        <a href="https://www.kakaocorp.com/page/" target="_blank">
+                            <img src="img/kakao.svg" alt="" class="img-border">
+                        </a>
                     </div>
 
-
-                </form>
+                </div>
             </div>
+
+
 
         </div>
 
