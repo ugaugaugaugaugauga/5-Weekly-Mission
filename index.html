@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkbrary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="img/logo.svg" alt="logo" class="logo"></a>
+
+        <div id="login" class="btn">
+            <a href="login.html" class="btn-link"><span class="btn-font">로그인</span></a>
+
+        </div>
+    </header>
+    <main>
+        <div>
+            <h2 class="top-heading">
+                <span class="gradient1">세상의 모든 정보</span>를<br> 쉽게 저장하고 관리해 보세요
+            </h2>
+        </div>
+
+        <div class="btn" id="link-add">
+            <a href="signup.html" class="btn-link"><span class="btn-font">링크 추가하기</span></a>
+        </div>
+
+        <section id="s1">
+            <div id="content1">
+                <div class="search-bar">
+                    <input type="text" name="search-link" id="search-link" placeholder="링크를 검색하세요">
+                </div>
+
+                <div class="link-list">
+                    <div class="link-list-bar">
+                        <div class="link-list-bar-btns">
+                            <button class="select-all-btn">
+                                전체
+                            </button>
+                            <button class="select-favorite-btn">
+                                <span class="yellow-star">✯</span> 즐겨찾기
+                            </button>
+                            <button class="select-folder-btn">
+                                폴더명
+                            </button>
+                        </div>
+                        <div class="add-folder">
+                            <button class="folder-add">폴더 추가 +</button>
+                        </div>
+                    </div>
+                    <div class="link-cards">
+                        <div class="card">
+                            <button class="add-favorite">
+                                <img src="img/star.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg1.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card bg2 card-selected">
+                            <button class="add-favorite">
+                                <img src="img/star.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg2.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card bg3">
+                            <button class="add-favorite">
+                                <img src="img/purplestar.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg3.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="card bg4">
+                            <button class="add-favorite">
+                                <img src="img/star.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg4.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card bg5">
+                            <button class="add-favorite">
+                                <img src="img/purplestar.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg5.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card bg6">
+                            <button class="add-favorite">
+                                <img src="img/purplestar.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg6.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="s2">
+            <div id="content2" class="container">
+                <div class="small-side">
+                    <div>
+                        <h3><span class="gradient2">원하는 링크</span>를 저장하세요</h3>
+                        <p class="description">
+                            나중에 읽고 싶은 글, 다시 보고 싶은 영상,
+                            사고 싶은 옷, 기억하고 싶은 모든 것을
+                            한 공간에 저장하세요.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="wide-side">
+                    <div class="card-row">
+                        <div class="card bg7 no-shrink-card">
+                            <button class="add-favorite">
+                                <img src="img/star.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg7.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="card bg8 card-selected no-shrink-card">
+                            <button class="add-favorite">
+                                <img src="img/star.svg" alt="" class="normal-star">
+                                <img src="img/purplestar.svg" alt="" class="purple-star">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg8.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+                            </div>
+
+                            <button class="save-icon">
+                                <img src="img/save.svg" alt="save-icon">
+                            </button>
+                        </div>
+
+
+                        <div class="card bg9 no-shrink-card">
+                            <button class="add-favorite">
+                                <img src="img/purplestar.svg" alt="">
+                            </button>
+                            <div class="thumbnail">
+                                <img src="img/bg9.jpg" alt="">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-info-bar">
+                                    <div class="card-info-time">
+                                        10 minutes ago
+                                    </div>
+                                    <div class="card-info-more">
+                                        <button>
+                                            <img src="img/kebab.svg" alt="" class="kebab">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, quam.
+                                </div>
+                                <div class="card-info-date">
+                                    2024.2.21
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="container">
+                <div class="wide-side">
+                    <div class="folder-change">
+                        <h4 class="op-font">폴더 이름 변경</h4>
+                        <input type="text" name="folder-name" class="folder-input" placeholder="내용 입력">
+                        <div class="btn folder-btn"><a href="#" class="btn-link">변경하기</a></div>
+                    </div>
+
+                </div>
+                <div class="small-side">
+                    <div>
+                        <h3>링크를 폴더로
+                            <span class="gradient3">관리</span>하세요
+                        </h3>
+                        <p class="description">
+                            나만의 폴더를 무제한으로 만들고
+                            다양하게 활용할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="container">
+
+                <div class="small-side">
+                    <div>
+                        <h3>저장한 링크를
+                            <span class="gradient4">공유</span>해 보세요.
+                        </h3>
+                        <p class="description">
+                            여러 링크를 폴더에 담고 공유할 수 있습니다. 가족, 친구, 동료들에게 쉽고 빠르게 링크를
+                            공유해 보세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="wide-side">
+                    <div class="folder-change">
+                        <h4 class="op-font">폴더 공유 하기</h4>
+                        <input type="text" name="folder-name" class="folder-input" placeholder="내용 입력">
+                        <div class="btn folder-btn"><a href="#" class="btn-link">변경하기</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="wide-side">
+
+                </div>
+                <div class="small-side">
+                    <div>
+                        <h3>저장한 링크를
+                            <span class="gradient5">검색</span>해 보세요
+                        </h3>
+                        <p class="description">
+                            중요한 정보들을 검색으로 쉽게 찾아보세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
