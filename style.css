@@ -105,6 +105,7 @@ main {
     color: var(--white);
     margin-top: 40px;
     margin-bottom: 90px;
+    cursor: pointer;
 }
 
 section {
@@ -209,6 +210,35 @@ input:focus {
     cursor: pointer;
 }
 
+.main_sub_nav {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_sub_nav p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.main_sub_nav_side {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.main_sub_nav_side_items {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #9fa6b2;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 /* m o d a l*/
 .modal {
     display: none;
@@ -271,6 +301,9 @@ input:focus {
     height: auto;
     gap: 8px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal_content {
@@ -348,6 +381,33 @@ input:focus {
     background: linear-gradient(to right, #6AE3FE, #6D6AFE);
 }
 
+.share_modal_utils {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 10px;
+}
+
+.share_modal_utils_icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--gray2);
+    cursor: pointer;
+}
+
+.share_modal_utils_icon_back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    background-color: hsla(0,0%,62%,.04);
+}
+
 /* c a r d */
 .card_grid_container {
     width: 90%;
@@ -380,6 +440,7 @@ input:focus {
     position: absolute;
     right: 5px;
     top: 5px;
+    cursor: pointer;
 }      
 
 .card_img_div{
@@ -449,6 +510,7 @@ input:focus {
 .dot_div{
     width: 21px;
     height: 17px;
+    cursor: pointer;
 }
 
 .dot_menu {
