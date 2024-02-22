@@ -116,11 +116,14 @@ section {
 .add-favorite {
   background-color: transparent;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5%;
+  right: 5%;
+  width: 20%;
+  height: auto;
 }
 
 .add-favorite img {
+  width: 100%;
 }
 
 .add-favorite:hover .normal-star {
