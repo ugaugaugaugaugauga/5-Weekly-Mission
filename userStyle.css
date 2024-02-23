@@ -25,9 +25,9 @@ body {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
     background-color: var(--gray5);
+    padding-top: 170px;
 }
 
 /* m a i n */
