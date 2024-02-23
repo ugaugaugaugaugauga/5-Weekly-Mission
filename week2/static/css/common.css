@@ -12,6 +12,13 @@
     --Linkbrary-bg: #F0F6FF;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+}
+
 /* 버튼 */
 .primary-btn {
     display: flex;
@@ -34,6 +41,10 @@
 
 .primary-btn.md {
     width: 350px;
+}
+
+.primary-btn.lg {
+    width: 400px;
 }
 
 .cursor-point {
