@@ -129,6 +129,10 @@ section {
   width: 100%;
   padding: 50px 461px;
   background-color: var(--white-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*====================================          CLASS           ==================================*/
@@ -173,6 +177,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 53px;
+  font-size: 18px;
 }
 
 .btn a {
@@ -443,6 +448,11 @@ section {
   border-radius: 50%;
 }
 
+.incorrect-password {
+  color: var(--red-color);
+  margin-top: 6px;
+}
+
 .info-link-bar ul {
   list-style: none;
   display: flex;
@@ -489,7 +499,7 @@ section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 38px;
 }
 
 .login-btn {
@@ -615,7 +625,7 @@ section {
   border: 1px solid var(--primary-color);
 }
 
-.sign-in {
+.sign {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -634,7 +644,7 @@ section {
   background: var(--Linkbrary-white, #fff);
 }
 
-.sign-in-form {
+.sign-form {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -645,7 +655,7 @@ section {
   align-items: center;
 }
 
-.sign-in-top {
+.sign-top {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -658,7 +668,7 @@ section {
   height: 38px;
 }
 
-.sign-up-link {
+.sign-link {
   font-weight: 600;
   color: var(--primary-color);
   text-decoration-line: underline;
@@ -806,16 +816,13 @@ section {
 
 #s1 {
   background-color: inherit;
-  padding: 50px 41px;
+  padding: 50px 0px;
   background-image: url("img/_dim.png");
   background-repeat: no-repeat;
   background-position: top center;
   max-width: 1920px;
   width: 100vw;
   height: 953px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   overflow: hidden;
 }
 
@@ -824,9 +831,6 @@ section {
   max-width: 1920px;
   margin: -400px 0 0;
   padding: 120px 0px 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 100px;
   flex: 1;
   height: 9000px;
