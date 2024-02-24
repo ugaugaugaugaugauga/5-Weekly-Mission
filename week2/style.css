@@ -482,6 +482,7 @@ section {
   top: 6px;
   height: 54px;
   font-size: 18px;
+  margin: 16px 0;
 }
 
 .logo {
@@ -630,6 +631,10 @@ section {
   padding: 0;
   width: 400px;
   align-items: center;
+}
+
+.signup-btn {
+  margin-top: 0;
 }
 
 .sign-top {
