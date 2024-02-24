@@ -107,11 +107,7 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    border : none;
-}
-
-.addLink:hover {
-    cursor: pointer;
+    text-decoration-line: none;
 }
 
 .img1 {
