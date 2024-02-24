@@ -1,0 +1,171 @@
+@import url("config.css");
+
+body {
+  padding: 238px 0 253px;
+  background: var(--Gray5);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.logo {
+  width: 210.583px;
+  height: 38px;
+}
+
+.move-link {
+  display: flex;
+  gap: 8px;
+}
+
+.move-link p {
+  color: var(--black, #000);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.move-link .signup-link {
+  color: var(--Primary-color);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input:focus {
+  border: var(--Primary-color);
+}
+
+.input-area label {
+  color: var(--black, #000);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.input-area input {
+  display: flex;
+  width: 100%;
+  padding: 18px 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area .password {
+  position: relative;
+}
+
+.password .eye-off {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  right: 15px;
+  transform: translate(-0%, -50%);
+  cursor: pointer;
+}
+
+.confirm.password {
+  border-radius: 8px;
+  border: 1px solid var(--Linkbrary-red, #ff5b56);
+}
+
+.caution {
+  margin-top: 6px;
+  color: var(--Linkbrary-red, #ff5b56);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.signup-btn {
+  display: flex;
+  width: 400px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--gra-purpleblue-to-skyblue, linear-gradient(91deg, #6d6afe 0.12%, #6ae3fe 101.84%));
+  text-decoration: none;
+  color: var(--Grey-Light);
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.social-login {
+  display: flex;
+  width: 400px;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--Gray3);
+  background: var(--Gray4);
+}
+
+.social-login p {
+  color: var(--Linkbrary-gray100, #373740);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.social-login .icon {
+  display: flex;
+  gap: 16px;
+}
+
+.google {
+  /* position: relative; */
+  background-image: url("../img/google-icon.svg");
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-mark {
+  width: 22px;
+  height: 22px;
+}
+
+.kakao {
+  background-image: url("../img/kakao-icon.svg");
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
