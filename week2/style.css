@@ -617,6 +617,10 @@ section {
   background: var(--Linkbrary-white, #fff);
 }
 
+.sign-input:focus {
+  border: 1px solid var(--skyblue-color);
+}
+
 .sign-form {
   display: flex;
   flex-direction: column;
