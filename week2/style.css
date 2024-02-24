@@ -44,7 +44,7 @@ button {
   border-radius: 5px;
   background-color: var(--white-color);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 button:hover {
@@ -73,7 +73,7 @@ h1 {
 
 h3 {
   color: #000;
-  font-size: 48px;
+  font-size: 3em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -137,12 +137,6 @@ section {
 
 /*====================================          CLASS           ==================================*/
 
-.add-link {
-  width: 350px;
-  margin: 40px auto;
-  gap: 10px;
-}
-
 .add-favorite {
   background-color: transparent;
   position: absolute;
@@ -170,14 +164,17 @@ section {
     var(--primary-color),
     var(--skyblue-color)
   );
-  color: var(--white-color);
   padding: 0;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 53px;
-  font-size: 18px;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: var(--Grey-Light, #f5f5f5);
+  font-style: normal;
+  line-height: normal;
 }
 
 .btn a {
@@ -193,15 +190,6 @@ section {
 .btn-link {
   text-decoration-line: none;
   color: var(--white-color);
-}
-
-.btn-font {
-  color: var(--Grey-Light, #f5f5f5);
-  font-family: Pretendard;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
 
 .card {
@@ -244,10 +232,7 @@ section {
 
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: Pretendard;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 0.625em;
   line-height: normal;
 }
 
@@ -255,20 +240,15 @@ section {
   display: -webkit-box;
   overflow: hidden;
   color: #000;
-  margin-top: -5px;
+  margin-top: -0.3125em;
   -webkit-line-clamp: 2; /* Number of lines to show */
   -webkit-box-orient: vertical;
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 150% */
+  font-size: 1em;
+  line-height: 1.25em;
 }
 .card-info-time {
   color: var(--grey-dark-color);
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 0.625em;
   line-height: normal;
 }
 
@@ -276,7 +256,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: fit-content;
-  gap: 18px;
+  gap: 1.125em;
 }
 
 .card-selected {
@@ -288,9 +268,7 @@ section {
 
   text-align: center;
   font-family: Abel;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 1em;
   line-height: normal;
 }
 
@@ -304,11 +282,9 @@ section {
 
 .description {
   color: #6b6b6b;
-  margin-right: 10px;
+  margin-right: 0.625em;
   font-family: Abel;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 1em;
   line-height: 150%; /* 24px */
 }
 
@@ -349,10 +325,8 @@ section {
 
 .folder-input::placeholder {
   color: var(--d4-gray-color);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 .folder-change {
@@ -372,10 +346,10 @@ section {
 .folder-name {
   color: var(--d4-gray-color);
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px; /* 157.143% */
+  line-height: 1.375em; /* 157.143% */
 }
 
 .folder-share {
@@ -520,8 +494,8 @@ section {
 
 .op-font {
   color: #373740;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 1.25em;
+
   font-weight: 700;
   line-height: normal;
 }
@@ -544,10 +518,7 @@ section {
   color: #cfcfcf;
 
   font-family: Abel;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 1em;
 }
 
 .purple-star {
@@ -600,7 +571,7 @@ section {
   background-repeat: no-repeat;
   background-position: left center;
 
-  font-size: 16px;
+  font-size: 1em;
   background-color: inherit;
   padding: 0 32px;
   color: var(--grey-dark-color);
@@ -608,7 +579,7 @@ section {
 }
 
 .search-result {
-  font-size: 32px;
+  font-size: 2em;
   margin-bottom: 10px;
 }
 
@@ -705,7 +676,7 @@ section {
   color: #444;
   text-align: center;
   font-family: Inter;
-  font-size: 13px;
+  font-size: 0.8125em;
   font-style: normal;
   font-weight: 600;
   line-height: 15px; /* 115.385% */
@@ -843,10 +814,16 @@ section {
   background-repeat: no-repeat;
   background-position: left center;
 
-  font-size: 16px;
+  font-size: 1em;
   background-color: inherit;
   padding: 0 32px;
   color: var(--grey-dark-color);
 
   border: none;
+}
+
+@media (max-width: 1118px) {
+  body {
+    font-size: 12px;
+  }
 }
