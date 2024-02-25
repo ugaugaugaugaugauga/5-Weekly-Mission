@@ -32,6 +32,10 @@ section {
   width: 100%;
 }
 
+img {
+  display: block;
+}
+
 .link {
   text-decoration: none;
   display: inline-block;
@@ -95,10 +99,6 @@ a {
   margin: 40px 0;
   padding: 16px 20px;
   border-radius: 8px;
-}
-
-.header-img {
-  width: 100%;
 }
 
 .description h1 {
@@ -182,36 +182,6 @@ a {
   border-radius: 8px;
 }
 
-.img-wrap.bg2 {
-  background-image: url("img/thumb.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.img-wrap.bg {
-  background-image: url("img/header-img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.bg-img {
-  position: relative;
-}
-
-.grid-wrap {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-row: auto;
-  width: 100%;
-  margin: 0 auto;
-  padding: 50px 461px;
-  gap: 15;
-}
-
 .footer-wrap {
   display: flex;
   height: 160px;
@@ -220,6 +190,13 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: var(--The-julge-black);
+}
+
+.img-wrap.bg {
+  background-image: url("img/contents-01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .corporate {
