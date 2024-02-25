@@ -1,0 +1,143 @@
+:root {
+  --gra-purpleblue-to-skyblue: linear-gradient(91deg, #6D6AFE 0.12%, #6AE3FE 101.84%);
+  --gra-purpleblue-to-pink: linear-gradient(91deg, #6D6AFE 17.28%, #FF9F9F 74.98%);
+  --gra-pink-to-blue: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
+  --gra-yello-to-blue:linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
+  --gra-blue-to-blue:linear-gradient(99deg, #6D7CCD 19.76%, rgba(82, 136, 133, 0.22) 52.69%);
+  --gra-skyblue-to-blue:linear-gradient(271deg, #FE578F -9.84%, #68E8F9 107.18%);
+  --purple-color: #6D6AFE;
+  --red-color: #FF5B56;
+  --black-color: #111322;
+  --white-color: #FFFFFF;
+  --gray1-color: #3E3E43;
+  --gray2-color: #9FA6B2;
+  --gray3-color: #CCD5E3;
+  --gray4-color: #E7EFFB;
+  --gray5-color: #F0F6FF;
+  --gray6-color: #6B6B6B;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  display: flex;
+  padding: 238px 0px 253px 0px;
+  justify-content: center;
+  align-items: center;
+  background: var(--gray5-color);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  font-weight: 400;
+}
+.bigcon{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.linkbrarylogo{
+  width: 210px;
+  height: 38px;
+}
+.signinlink{
+  color: var(--purple-color);
+  font-weight: 600;
+  line-height: normal;
+}
+.signintop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; 
+}
+
+
+label{
+  font-size: 14px;
+  line-height: normal;
+}
+input{
+  display: flex;
+  width: 400px;
+  padding: 18px 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--gray3-color); /*포커스온 되면 색깔 바꾸기*/
+  background: var(--white-color);
+}
+
+.passwordicon{
+  position: absolute;
+  right: 22px;
+  top: 48px;
+  width: 16px;
+  height: 16px;
+}
+
+.signinmid{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.midgap{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.loginbutton{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 400px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  background: var(--gra-purpleblue-to-skyblue);
+  border: none;
+  border-radius: 8px;
+  color: var(--white-color);
+}
+.sns{
+  display: flex;
+  width: 400px;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--gray3-color);
+  background: var(--gray4-color);
+}
+
+.logozip{
+  display: flex;
+  gap: 16px;
+}
+
+#email:focus,
+#pasword:focus{
+  border-color: var(--purple-color);
+  outline: none;
+}
+
+.linkbrarylogo:hover,
+a:hover,
+.loginbutton:hover{
+  cursor: pointer;
+}
+
+/*맨 위에 로고 클릭 시 홈페이지 / 회원가입하기 버튼 클릭 시 회원가입 창 소셜 로그인 구글 버튼은 구글로 카카오는 카카오로 기능*/
