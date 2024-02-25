@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signin</title>
+  </head>
+  <body>
+    <div class="signin">
+      <div class="signin-form">
+        <div class="signin-logo">
+          <a href="index.html"><img src="svgs/logo.svg" alt="logo" /></a>
+          <div class="question black">
+            <span>회원이 아니신가요?</span>
+            <a href="signup.html" class="primary">회원 가입하기</a>
+          </div>
+        </div>
+        <form>
+          <label for="email">이메일</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="codeit@codeit.com"
+          />
+          <label for="password">비밀번호</label>
+          <div class="password">
+            <input id="password" name="password" type="password" />
+            <i class="fa-solid fa-eye" id="togglePassword"></i>
+          </div>
+          <button class="signin-but white">로그인</button>
+        </form>
+        <div class="social-login gray-4">
+          <span>소셜 로그인</span>
+          <div class="social-images">
+            <a href="https://www.google.com/"
+              ><img src="svgs/google.svg" alt="google"
+            /></a>
+            <a href="https://www.kakaocorp.com/page/"
+              ><img src="svgs/kakao.svg" alt="kakao"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("password");
+
+      togglePassword.addEventListener("click", function () {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+
+        // 아이콘 클래스 토글
+        if (type === "text") {
+          togglePassword.classList.remove("fa-eye");
+          togglePassword.classList.add("fa-eye-slash");
+        } else {
+          togglePassword.classList.remove("fa-eye-slash");
+          togglePassword.classList.add("fa-eye");
+        }
+      });
+    </script>
+  </body>
+</html>
