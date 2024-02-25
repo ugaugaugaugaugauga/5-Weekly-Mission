@@ -36,6 +36,7 @@ header button{
   width:128px;
   border-radius: 8px;
   background-image: linear-gradient(90deg,#6D6AFD,skyblue);
+  cursor: pointer;
 }
 
 .main{
@@ -79,18 +80,9 @@ header button{
   background-image: linear-gradient(90deg,#6D6AFD,skyblue);
 }
 
-.main-image{
-  width:1200px;
-  height: 590px;
-}
-
-.main-image img{
-  padding: 50px 41px 0  41px;
+.main img{
   background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #F0F6FF 100%);
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
-  border-radius: 25px;
-  width:100%;
-  height: 100%;
+  width:1200px;
 }
 
 .service{
