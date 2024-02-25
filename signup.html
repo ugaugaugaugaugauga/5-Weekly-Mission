@@ -1,73 +1,67 @@
-<!-- 회원가입 페이지 -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Acme&display=swap" rel="stylesheet">
     <title>signup</title>
   </head>
 
-  <body class="user">
-
-    <!-- 중간 맞추기 -->
-    <div class="signin">
-      <div class="signin__logo">
-        <a href="/"><img  class="signin__logo__img" src="/img/logo.svg"></a>
-        <!-- 주소창에 뜨는 이름 바꾸기 -->
-        <div class="signin__logo__centerTest">
-          <p class="signin__logo__not-user">이미 회원이신가요?</p>
-          <a class="signin__logo__join-user" href="/signin.html">로그인 하기</a>
+  <body class="sign">
+    <div class="sign__inner">
+      <div class="sign__inner__logo">
+        <a href="/"><img src="/img/logo.svg" class="sign__logo__img"></a>
+        <div class="sign__logo__centerTest">
+          <p class="sign__logo__not-member">이미 회원이신가요?</p>
+          <a href="/signin.html" class="signin__logo__link-signup">로그인 하기</a>
         </div>
       </div>
 
       <form>
-        <div class="signin-input">
-          <!-- 인풋 입력 상자 변경가능한지 확인 / placeholder="" : 입력 안했을 때 나오는 글-->
-          <div class="signin-input__login">
-            <label class="signin-input__login__label" for="email">이메일</label>
-            <input type="email" class="signin-input__login__input input" name="eamil"> <!--타입이 가장 앞으로 변경하기-->
+        <div class="sign-input">
+          <div class="sign-input__login">
+            <label for="email" class="sign-input__login__label">이메일</label>
+            <input type="email" class="sign-input__login__input" name="eamil"> <!--타입이 가장 앞으로 변경하기-->
           </div>
-          <div class="signin-input__login">
-            <label class="signin-input__login__label" for="password">비밀번호</label>
-            <div class="eye-test">
-              <input type="password" class="signin-input__login__input input" name="pw">
-              <div class="signin-input__eye-off">  
+          <div class="sign-input__login">
+            <label for="password" class="sign-input__login__label">비밀번호</label>
+            <div class="sign-input__pw-eye">
+              <input type="password" class="sign-input__login__input" name="pw">
+              <div class="sign-input__pw-eye-off">  
                 <img src="/img/eye-off.svg">
               </div>
             </div>
           </div>
-          <div class="signin-input__login">
-            <label class="signin-input__login__label" for="password">비밀번호 확인</label>  <!-- 비밀번호 확인 수정 -->
-            <div class="eye-test">
-              <input type="password" class="signin-input__login__input input" name="pw">
-              <div class="signin-input__eye-off">  
+          <div class="sign-input__login">
+            <label for="password" class="sign-input__login__label">비밀번호 확인</label>  <!-- 비밀번호 확인 수정 -->
+            <div class="sign-input__pw-eye">
+              <input type="password" class="sign-input__login__input" name="pw">
+              <div class="sign-input__pw-eye-off">  
                 <img src="/img/eye-off.svg">
               </div>
             </div>
           </div>
         </div>
+        <button type="submit" class="sign-btn btn-color">회원가입</button>
       </form>
-
-        <button type="submit" class="signin-btn">회원가입</button>
     </div>
 
-    <div class="out-log">
-      <p class="out-log__font">다른 방식으로 가입하기</p> 
-      <div class="out-log__center-test">
+    <div class="other-login">
+      <p class="other-login__title">다른 방식으로 가입하기</p> 
+      <div class="other-login__inner">
         <a href="https://www.google.com/">
-          <div class="out-log__center">
-            <img class="out-log__icon" src="/img/google.png">
-            <!-- <div class="out-log__icon-back icon-backtest"></div>  -->
+          <div class="other-login__inner__icon">
+            <img src="/img/google.png" class="other-login__icon-img">
             <img src="/img/googleback.svg">
           </div>
         </a>
         <a href="https://www.kakaocorp.com/page/">
-          <!-- 선택 안했을 땐 회색 테두리 -->
-          <div class="out-log__center">
-            <img class="out-log__icon" src="/img/facebook.svg">
-            <!-- <div class="out-log__icon-back"></div>  -->
+          <div class="other-login__inner__icon">
+            <img src="/img/facebook.svg" class="other-login__icon-img">
             <img src="/img/facebookback.svg">
           </div>
         </a>
