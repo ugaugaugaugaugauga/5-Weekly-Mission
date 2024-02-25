@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>signin</title>
+  </head>
+
+  <body class="user">
+
+    <!-- 중간 맞추기 -->
+    <div class="signin">
+      <div class="signin__logo">
+        <a href="/"><img  class="signin__logo__img" src="/img/logo.svg"></a>
+        <!-- 주소창에 뜨는 이름 바꾸기 -->
+        <div class="signin__logo__centerTest">
+          <p class="signin__logo__not-user">회원이 아니신가요?</p>
+          <a class="signin__logo__join-user" href="/signup.html">회원 가입하기</a>
+        </div>
+      </div>
+
+      <form>
+        <div class="signin-input">
+          <!-- placeholder="" : 입력 안했을 때 나오는 글-->
+          <div class="signin-input__login">
+            <label class="signin-input__login__label" for="email">이메일</label>
+            <input type="email" class="signin-input__login__input" name="eamil">
+          </div>
+          <div class="signin-input__login">
+            
+            <label class="signin-input__login__label" for="pw">비밀번호</label>
+            
+            <div class="eye-test">
+              <input type="password" class="signin-input__login__input input" name="pw">
+              <div class="signin-input__eye-off">  
+                <img src="/img/eye-off.svg">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form> <!-- 버튼을 폼에서 빼도 되는가? -->
+
+        <button type="submit" class="signin-btn">로그인</button>  <!-- 네이버 로그인 보고 다시하기 -->
+    </div>
+    
+    <div class="out-log">
+      <p class="out-log__font">소셜 로그인</p> 
+      <div class="out-log__center-test">
+        <a href="https://www.google.com/">
+          <div class="out-log__center">
+            <img class="out-log__icon" src="/img/google.png">
+            <!-- <div class="out-log__icon-back icon-backtest"></div>  -->
+            <img src="/img/googleback.svg">
+          </div>
+        </a>
+        <a href="https://www.kakaocorp.com/page/">
+          <!-- 선택 안했을 땐 회색 테두리 -->
+          <div class="out-log__center">
+            <img class="out-log__icon" src="/img/facebook.svg">
+            <!-- <div class="out-log__icon-back"></div>  -->
+            <img src="/img/facebookback.svg">
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
