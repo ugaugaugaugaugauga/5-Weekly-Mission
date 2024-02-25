@@ -409,8 +409,8 @@ body {
   background: var(--Linkbrary-white);
 }
 
-.sign-input__login__input:hover {
-  border: 1px solid var(--Linkbrary-primary-color);
+.sign-input__login__input:focus {
+  outline: 1px solid var(--Linkbrary-primary-color);
 }
 
 .sign-input__pw-eye {
