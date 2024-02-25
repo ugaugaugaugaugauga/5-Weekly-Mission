@@ -177,12 +177,25 @@ body {
 
 .card-item__line__bg {
   display: flex;
+  position: relative;
   margin: 0;
 }
 
 .card1-left {
   position: relative; 
   right: -12px;
+}
+
+/* .card1-middle {
+  border-radius: 11px;
+  border: 2px solid var(--Linkbrary-primary-color, #6D6AFE);
+} */
+
+.card1-download {
+  position: absolute;
+  top: 220px;
+  right: 150px;
+  z-index: 1;
 }
 
 .crad1-right {
