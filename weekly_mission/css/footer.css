@@ -4,9 +4,8 @@
 
 .footer {
 	width: 100%;
-	max-width: 1920px;
 	height: 280px;
-	padding: 120px 0 0 0;
+	padding-top: 120px;
 }
 
 .footer-frame {
@@ -17,15 +16,13 @@
 	padding: 32px 104px 64px 104px;
 }
 
-.footer-texts {
+.footer-components {
 	height: 20px;
-	
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
     gap: 30px 60px;
-
 	font-family: 'Acme';
 	font-size: 16px;
 	font-weight: 400;
@@ -36,7 +33,7 @@
 	color: #676767;
 }
 
-.footer-textbox {
+.footer-linkbox {
 	display: flex;
 	height: 20;
 	gap: 30px;
@@ -47,7 +44,6 @@
 	text-decoration-line: none;
 	cursor: pointer;
 }
-
 .footer-FAQ{
 	color: #cfcfcf;
 	text-decoration-line: none;
@@ -62,4 +58,39 @@
 .footer-icon{
 	width:20px;
 	cursor: pointer;
+}
+
+@media(max-width: 767px){
+	.footer{
+		height: 200px;
+		padding-top: 40px;
+	}
+	.footer-frame{
+		padding: 32px 32px 32px 32px;
+	}
+	.footer-components {
+		height: 96px;
+		position: relative;
+		font-family: 'Acme';
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.footer-linkbox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		height: 20;
+		gap: 30px;
+	}
+	.footer-codeit {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	.footer-Icons{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 }
