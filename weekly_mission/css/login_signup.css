@@ -261,7 +261,7 @@ button{
 }
 
 /* mobile용 페이지 크기 설정 */
-@media(max-width: 1199px){
+@media(max-width: 767px){
 	.login-content{
 		top: 120px;
 		width: 325px;
