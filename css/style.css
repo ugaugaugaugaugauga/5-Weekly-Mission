@@ -1,13 +1,31 @@
+@font-face {
+  font-family: Pretendard;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+}
+
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.acme-regular {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root{
   --Primary: #6D6AFE;
-  --red: #FF5B56;
-  --The-julge-black: #111322;
-  --white: #FFFFFF;
-  --gray-100: #373740;
-  --gray-60: #9FA6B2;
-  --gray-20: #CCD5E3;
-  --gray-10: #E7EFFB;
-  --bg: #F0F6FF;
+  --ErrorMessage: #FF5B56;
+  --Footer-black: #111322;
+  --Section: #FFFFFF;
+  --Gray-100: #373740;
+  --Gray-60: #9FA6B2;
+  --Gray-20: #CCD5E3;
+  --Gray-10: #E7EFFB;
+  --Gray-cta: #F5F5F5;
+  --Background: #F0F6FF;
 }
 
 *{
@@ -15,7 +33,7 @@
 }
 
 body{
-  background-color: var(--bg);
+  background-color: var(--Background);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -23,15 +41,12 @@ body{
 }
 
 nav{
-  position: fixed;
-  display: flex;
+  position: sticky;
   padding: 20px 200px;
-  flex-direction: column;
-  align-items: center;
   gap: 8px;
-  align-self: stretch;
   width: 100%;
-  z-index: 2;
+  top: 0;
+  z-index: 1;
 }
 
 .navModal{
@@ -46,21 +61,18 @@ nav img{
   height: 24px;
 }
 
-.modalBtn{
-  cursor: pointer;
-  display: flex;
-  width: 128px;
-  padding: 16px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  border-radius: 8px;
-  background: var(--gra-purpleblue-to-skyblue, linear-gradient(91deg, var(--Primary) 0.12%, #6AE3FE 101.84%));
-}
-
 a{
   text-decoration: none;
-  color: var(--Grey-Light, #F5F5F5);
+}
+
+.cta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--gra-purpleblue-to-skyblue, linear-gradient(91deg, var(--Primary) 0.12%, #6AE3FE 101.84%));
+  color: var(--Gray-cta);
+  padding: 16px 20px;
   font-family: Pretendard;
   font-size: 18px;
   font-style: normal;
@@ -68,7 +80,15 @@ a{
   line-height: normal;
 }
 
-p{
+.cta-short{
+  width: 128px;
+}
+
+.cta-long{
+  width: 350px;
+}
+
+.description{
   color: #6B6B6B;
   font-family: Abel;
   font-size: 16px;
@@ -79,30 +99,30 @@ p{
 }
 
 header {
-  background: var(--bg);
+  background: var(--Background);
   width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 94px;
 }
 
-.header__Contents{
+.header__contents{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   gap: 40px;
+  padding-top: 70px;
 }
 
-.header__Contents img{
+.header__contents img{
   width: 100%;
   border-radius: 25px;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
 }
 
-header h1{
+.slogan {
   margin: 0;
   text-align: center;
   font-family: Pretendard;
@@ -112,14 +132,14 @@ header h1{
   line-height: 80px; /* 125% */
 }
 
-header h1 span{
+.slogan_gradient{
   background: linear-gradient(91deg, var(--Primary) 17.28%, #FF9F9F 74.98%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.header__Image{
+.header__image{
   padding: 50px 40px 0 40px;
   margin: 0 auto;
   width: 1200px;
@@ -135,7 +155,7 @@ header h1 span{
 main{
   margin: 0 auto;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--Section);
 }
 
 section{
@@ -167,7 +187,7 @@ article{
   gap: 10px;
 }
 
-.article__textBox h2{
+.textBox__title{
   font-family: Pretendard;
   font-size: 48px;
   font-style: normal;
@@ -177,7 +197,7 @@ article{
   margin: 0;
 }
 
-.article__textBox.save span{
+.textBox__title-1__gradient{
   background: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -190,7 +210,7 @@ article{
   width: 550px;
   height: 450px;
   border-radius: 15px;
-  background: var(--bg);
+  background: var(--Background);
 }
 
 .article__contents__container{
@@ -214,67 +234,66 @@ article{
 
 .article__contents__emptyContent img{
   position: absolute;
-  width: 46px;
-  height: 46px;
+  object-fit: contain;
   top: 210px;
   left: 210px;
 }
 
-.article__contents.folder{
+.folderSection{
   padding: 114px 68px 66px 68px;
 }
 
-.article__textBox.folder span{
+.textBox__title-2__gradient{
   background: linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.article__textBox.share span{
+.textBox__title-3__gradient{
   background: linear-gradient(99deg, #6D7CCD 19.76%, rgba(82, 136, 133, 0.22) 52.69%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.article__contents.share{
+.shareSection{
   position: relative;
   padding: 114px 68px 66px 68px;
   border-radius: 25px;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
-  background-image: url(image/image\ 25.png);
+  background-image: url(/image/image\ 25.png);
   background-size: 160%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.article__contents.shareDark{
+.shareDark{
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
 }
 
-.article__contents.share img{
+.shareSection img{
   z-index: 1;
 }
 
-.article__contents.search{
+.searchSection{
   overflow: hidden;
 }
 
-.search__Image{
+.searchSection__Image{
   position: relative;
   top: 55px;
   left: 60px;
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background-image: url(image/스크린샷\ 2023-03-17\ 오후\ 3.22\ 1.png);
+  background-image: url(/image/스크린샷\ 2023-03-17\ 오후\ 3.22\ 1.png);
   background-size: cover;
 }
 
-.article__textBox.search span{
+.textBox__title-4__gradient{
   background: var(--Fandom-K-gra-blue-to-pink, linear-gradient(271deg, #FE578F -9.84%, #68E8F9 107.18%));
   background-clip: text;
   -webkit-background-clip: text;
@@ -284,7 +303,7 @@ article{
 footer{
   width: 100%;
   margin: 0 auto;
-  background: var(--The-julge-black);
+  background: var(--Footer-black);
   padding: 32px 104px 64px;
 }
 

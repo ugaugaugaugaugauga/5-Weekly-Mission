@@ -1,10 +1,21 @@
+@font-face {
+  font-family: Pretendard;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+}
+
+:root{
+  --Black: #000000;
+  --Primary: #6D6AFE;
+  --Backgournd: #F0F6FF;
+}
+
 *{
   box-sizing: border-box;
 }
 
 body{
   margin: 0 auto;
-  background: var(--Linkbrary-bg, #F0F6FF);
+  background: var(--Backgournd);
 }
 
 section{
@@ -16,7 +27,7 @@ section{
 }
 
 span{
-  color: var(--black, #000);
+  color: var(--Black);
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
@@ -25,7 +36,7 @@ span{
 }
 
 a{
-  color: var(--Linkbrary-primary-color, #6D6AFE);
+  color: var(--Primary);
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
@@ -47,6 +58,7 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 
@@ -85,10 +97,12 @@ input{
   border-radius: 8px;
   border: 1px solid var(--Linkbrary-gray20, #CCD5E3);
   background: var(--Linkbrary-white, #FFF);
+  font-size: 16px;
+  line-height: 24px;
 }
 
 input:focus{
-  border: 1px solid var(--Linkbrary-primary-color, #6D6AFE);
+  border: 1px solid var(--Primary);
 }
 
 form{
@@ -148,14 +162,6 @@ form{
   background-size: cover;
   background-position: center;
   padding: 10px;
-}
-
-.logo.google{
-  background-image: url(image/google.svg);
-}
-
-.logo.kakao{
-  background-image: url(image/facebook.svg);
 }
 
 .mainLogo{
