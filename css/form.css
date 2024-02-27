@@ -6,6 +6,10 @@
     min-width: 21.875rem;
 }
 
+.min-width-200 {
+    min-width: 12.5rem;
+}
+
 .width-full {
     width: 100%;
 }
