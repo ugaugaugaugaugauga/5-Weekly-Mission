@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,22 +7,20 @@
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
+    <nav>
+      <div class="gnb">
+        <a href="index.html"><img src="img/logo.svg" alt="Linkbrary-logo" /></a>
+        <a href="signin.html" class="header-link signin">로그인</a>
+      </div>
+    </nav>
     <header>
-      <nav>
-        <div class="section-nav">
-          <a href="index.html"
-            ><img src="img/logo.svg" alt="Linkbrary-logo"
-          /></a>
-          <a href="signin.html" class="link login">로그인</a>
-        </div>
-      </nav>
       <div class="contents-01">
         <h1 class="header-title">
           <span class="header-title-gradient">세상의 모든 정보</span>를<br />
           쉽게 저장하고 관리해 보세요
         </h1>
-        <a href="signup.html" class="link add">링크 추가하기</a>
-        <img src="img/contents-01.png" alt="contents-01" />
+        <a href="signup.html" class="header-link add">링크 추가하기</a>
+        <img src="img/header.png" alt="header-img" class="header-img" />
       </div>
     </header>
     <main>
@@ -31,8 +29,8 @@
         <div class="card padding">
           <div class="description">
             <h1>
-              <span class="description-storage">원하는 링크</span
-              >를<br />저장하세요
+              <span class="description-storage">원하는 링크</span>를<br />
+              저장하세요
             </h1>
             <p>
               나중에 읽고 싶은 글, 다시 보고 싶은 영상,<br />
@@ -41,7 +39,11 @@
             </p>
           </div>
           <div class="img-wrap">
-            <img src="img/contents-02.png" alt="contents-02" />
+            <img
+              src="img/contents-01.png"
+              alt="contents-02"
+              class="contents-img"
+            />
           </div>
         </div>
       </section>
@@ -49,7 +51,11 @@
       <section>
         <div class="card">
           <div class="img-wrap">
-            <img src="img/contents-03.png" alt="contents-03" />
+            <img
+              src="img/contents-02.png"
+              alt="contents-03"
+              class="contents-img"
+            />
           </div>
           <div class="description">
             <h1>
@@ -77,8 +83,12 @@
               공유해 보세요.
             </p>
           </div>
-          <div class="img-wrap bg">
-            <img src="img/contents-04.png" alt="contents-04" />
+          <div>
+            <img
+              src="img/contents-03.png"
+              alt="contents-04"
+              class="contents-img"
+            />
           </div>
         </div>
       </section>
@@ -86,7 +96,7 @@
       <section>
         <div class="card">
           <div class="img-wrap">
-            <img src="img/section04.png" />
+            <img src="img/contents-04.png" class="contents-img" />
           </div>
           <div class="description">
             <h1>
