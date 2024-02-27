@@ -1,12 +1,26 @@
 @import "reset.css";
 
+:root {
+	--primary: #6D6AFD;  /* CSS 전역 변수 선언 */
+  --red:#FF5B56;
+  --black: #111322;
+  --white: #FFFFFF;
+  --gray01:#3E3E43;
+  --gray02:#9FA6B2;
+  --gray03:#CCD5E3;
+  --gray04:#E7EFFB;
+  --gray05:#F0F6FF;
+
+}
+
 * {
   box-sizing: border-box;
 }
 
 html{
-  background-color: #F0F6FF;
+  background-color: var(--gray);
   width:100%;
+  min-width: 1920px;
 }
 
 body{
@@ -35,7 +49,7 @@ header button{
   word-wrap: break-word;
   width:128px;
   border-radius: 8px;
-  background-image: linear-gradient(90deg,#6D6AFD,skyblue);
+  background-image: linear-gradient(90deg,var(--primary),skyblue);
   cursor: pointer;
 }
 
@@ -77,11 +91,11 @@ header button{
   word-wrap: break-word;
   width:350px;
   border-radius: 8px;
-  background-image: linear-gradient(90deg,#6D6AFD,skyblue);
+  background-image: linear-gradient(90deg,var(--primary),skyblue);
 }
 
 .main img{
-  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #F0F6FF 100%);
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, var(--gray05) 100%);
   width:1200px;
 }
 
@@ -124,7 +138,7 @@ header button{
   display: flex;
   align-items: center;
   justify-content: space-around ;
-  background-color: #F0F6FF;
+  background-color: var(--gray05);
   border-radius: 15px; 
   overflow: hidden; 
 }
@@ -132,6 +146,16 @@ header button{
 .service-01 img{
   border-radius: 11px;
   overflow: hidden;
+}
+
+.service-01 .center{
+  position: relative;
+}
+
+.service-01 .icon{  
+  position: absolute;
+  bottom:0;
+  right:0;
 }
 
 .service-02 img{
