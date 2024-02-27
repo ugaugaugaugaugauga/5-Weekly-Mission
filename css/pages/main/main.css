@@ -24,6 +24,12 @@ header {
     top: 0;
 }
 
+header > h1.logo > a {
+    display: flex;
+    width: 133px;
+    height: 24px;
+}
+
 .img-box {
     width: 34.375rem;
     height: 28.125rem;
@@ -33,7 +39,7 @@ header {
 }
 
 .section-01 {
-    background: url(../images/main/sec01_img.png) no-repeat center bottom 0 rgba(240, 246, 255, 1);
+    background: url(../../../images/main/sec01_img.png) no-repeat center bottom 0 rgba(240, 246, 255, 1);
     text-align: center;
     padding: 10.1875rem 0 39.375rem;
 }
@@ -53,19 +59,19 @@ header {
 }
 
 .section-02 ul > li:nth-child(1) .text-gradient {
-    background: linear-gradient(95.63deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
+    background: linear-gradient(95.63deg, #FE8A8A 1.72%, #A4CEFF 74.97%) text;
 }
 
 .section-02 ul > li:nth-child(2) .text-gradient {
-    background: linear-gradient(277.01deg, #6FBAFF 11.22%, #FFD88B 93.66%);
+    background: linear-gradient(277.01deg, #6FBAFF 11.22%, #FFD88B 93.66%) text;
 }
 
 .section-02 ul > li:nth-child(3) .text-gradient {
-    background: linear-gradient(99.5deg, #6D7CCD 44.76%, rgba(82, 136, 133, 0.22) 100%);
+    background: linear-gradient(99.5deg, #6D7CCD 44.76%, rgba(82, 136, 133, 0.22) 100%) text;
 }
 
 .section-02 ul > li:nth-child(4) .text-gradient {
-    background: linear-gradient(271.36deg, #FE578F -200%, #68E8F9 107.18%);
+    background: linear-gradient(271.36deg, #FE578F -200%, #68E8F9 107.18%) text;
 }
 
 .section-02 ul > li p {
