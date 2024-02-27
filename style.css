@@ -1,6 +1,4 @@
 :root {
-
-  /*색 변수 이름도 그동안 쓴 이름 규칙대로*/
   --black: #000;
   --linkbrary-white: #FFF;
   --linkbrary-primary-color: #6D6AFE;
@@ -10,7 +8,6 @@
   --linkbrary-bg: #F0F6FF;
   --grey-light: #F5F5F5;
   --the-julge-black: #111322;
-
   --card-item-text: #6B6B6B;
   --footer-text: #676767;
   --footer-link-text: #CFCFCF;
@@ -379,6 +376,7 @@ body {
 .sign-input__login__input:focus {
   outline: 1px solid var(--linkbrary-primary-color);
 }
+
 
 .sign-input__pw-eye {
   position: relative;
