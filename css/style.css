@@ -1,0 +1,337 @@
+@font-face {
+  font-family: Pretendard;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+}
+
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.acme-regular {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root{
+  --Primary: #6D6AFE;
+  --ErrorMessage: #FF5B56;
+  --Footer-black: #111322;
+  --Section: #FFFFFF;
+  --Gray-100: #373740;
+  --Gray-60: #9FA6B2;
+  --Gray-20: #CCD5E3;
+  --Gray-10: #E7EFFB;
+  --Gray-cta: #F5F5F5;
+  --Background: #F0F6FF;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--Background);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav{
+  position: sticky;
+  padding: 20px 200px;
+  gap: 8px;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.navModal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+nav img{
+  width: 133px;
+  height: 24px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.cta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--gra-purpleblue-to-skyblue, linear-gradient(91deg, var(--Primary) 0.12%, #6AE3FE 101.84%));
+  color: var(--Gray-cta);
+  padding: 16px 20px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.cta-short{
+  width: 128px;
+}
+
+.cta-long{
+  width: 350px;
+}
+
+.description{
+  color: #6B6B6B;
+  font-family: Abel;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  margin: 0;
+}
+
+header {
+  background: var(--Background);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  padding-top: 70px;
+}
+
+.header__contents img{
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+.slogan {
+  margin: 0;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px; /* 125% */
+}
+
+.slogan_gradient{
+  background: linear-gradient(91deg, var(--Primary) 17.28%, #FF9F9F 74.98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__image{
+  padding: 50px 40px 0 40px;
+  margin: 0 auto;
+  width: 1200px;
+  height: 590px;
+  overflow: hidden;
+}
+
+.modalBtn.link{
+  width: 350px;
+  gap: 10px;
+}
+
+main{
+  margin: 0 auto;
+  width: 100%;
+  background-color: var(--Section);
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+section:first-child{
+  margin-top: 120px;
+}
+
+section:last-child{
+  margin-bottom: 120px;
+}
+
+article{
+  display: flex;
+  align-items: center;
+  gap: 157px;
+}
+
+.article__textBox{
+  display: flex;
+  width: 291px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.textBox__title{
+  font-family: Pretendard;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.textBox__title-1__gradient{
+  background: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.article__contents{
+  position: relative;
+  display: flex;
+  width: 550px;
+  height: 450px;
+  border-radius: 15px;
+  background: var(--Background);
+}
+
+.article__contents__container{
+  display: inline-flex;
+  align-items: center;
+}
+
+.article__contents__container img{
+  margin-right: -12px;
+}
+
+.article__contents__emptyContent{
+  position: absolute;
+  width: 244px;
+  height: 239px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  border: 2px solid var(--Primary);
+  margin: 102px 154px 109px 152px; 
+}
+
+.article__contents__emptyContent img{
+  position: absolute;
+  object-fit: contain;
+  top: 210px;
+  left: 210px;
+}
+
+.folderSection{
+  padding: 114px 68px 66px 68px;
+}
+
+.textBox__title-2__gradient{
+  background: linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textBox__title-3__gradient{
+  background: linear-gradient(99deg, #6D7CCD 19.76%, rgba(82, 136, 133, 0.22) 52.69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shareSection{
+  position: relative;
+  padding: 114px 68px 66px 68px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+  background-image: url(/image/image\ 25.png);
+  background-size: 160%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shareDark{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.shareSection img{
+  z-index: 1;
+}
+
+.searchSection{
+  overflow: hidden;
+}
+
+.searchSection__Image{
+  position: relative;
+  top: 55px;
+  left: 60px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-image: url(/image/스크린샷\ 2023-03-17\ 오후\ 3.22\ 1.png);
+  background-size: cover;
+}
+
+.textBox__title-4__gradient{
+  background: var(--Fandom-K-gra-blue-to-pink, linear-gradient(271deg, #FE578F -9.84%, #68E8F9 107.18%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer{
+  width: 100%;
+  margin: 0 auto;
+  background: var(--Footer-black);
+  padding: 32px 104px 64px;
+}
+
+.footer__menu{
+  margin-bottom: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__menu__modal{
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.footer__menu__modal a{
+  color: #CFCFCF;
+  font-family: Acme;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer__menu__icon{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
