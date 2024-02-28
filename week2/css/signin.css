@@ -1,0 +1,141 @@
+html {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  position: relative;
+  width: 1920px;
+  height: 100vh;
+  background: #F0F6FF; /* 기본 배경색을 하늘색으로 지정 */
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+  position: absolute;
+  width: 400px;
+  height: 491px;
+  left: 520px;
+  top: 238px;  
+}
+
+.head-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 16px;
+width: 218px;
+height: 78px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.head-container img {
+  position: absolute;
+  left: 3.71px;
+}
+
+/* 회원이 아니신가요? */
+.head-container p {
+  width: 123px;
+  height: 24px;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* black */
+  color: #000000;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signup-container {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+width: 400px;
+height: 202px;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.input-group {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+width: 400px;
+height: 89px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+/* text - 이메일, 비밀번호 */
+.input-group label {
+width: 37px;
+height: 17px;
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+/* black */
+color: #000000;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.input-group input {
+  box-sizing: border-box;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 15px;
+  width: 400px;
+  height: 60px;
+  /* Linkbrary/white */
+  background: #FFFFFF;
+  /* Linkbrary/primary-color */
+  border: 1px solid #6D6AFE;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signup-container img {
+  position: absolute;
+  top: 30px;
+}
+
+.button img {
+  position: absolute;
+  top: 340px;
+}
