@@ -11,28 +11,27 @@
     .wrap {
         width: 43.625rem;
     }
-    
+
     .img-box {
-        width: 385px;
-        height: 315px;
+        width: 24.0625rem;
+        height: 19.6875rem;
     }
 }
 
 @media (max-width: 767px) { /* 모바일 */
     h2 {
-        font-size: 32px;
-        line-height: 42px;
+        font-size: 2rem;
+        line-height: 1.3125;
         padding: 0 4rem;
     }
 
     h3 {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 1.5rem;
+        line-height: 1.16666666667;
     }
 
     p {
-        font-size: 15px;
-        line-height: 22.5px;
+        font-size: 0.9375rem;
     }
 
     br{
@@ -47,7 +46,7 @@
 
     .img-box {
         width: 100%;
-        height: 265px;
+        height: 16.5625rem;
         margin: 1.25rem 0 1rem;
         position: relative;
     }
@@ -57,13 +56,13 @@
     }
 
     header {
-        padding: 13px 2rem;
+        padding: 0.8125rem 2rem;
         margin: -3.9375rem 0 0;
     }
 
     header > h1.logo > a {
         width: 88.67px;
-        height: 16px;
+        height: 1rem;
     }
 
     .section-01 {
@@ -72,7 +71,7 @@
     }
 
     .section-01 > h2 {
-        margin: 0 0 24px;
+        margin: 0 0 1.5rem;
     }
 
     .section-02 ul > li {
@@ -85,7 +84,7 @@
     .section-02 ul > li:nth-child(2n) h3{
         position: absolute;
         left: 0;
-        top: -28px;
+        top: -1.75rem;
     }
 
     .section-02 ul > li p {
@@ -95,7 +94,7 @@
 
     footer {
         position: relative;
-        padding: 2rem 2rem 108px 2rem;
+        padding: 2rem 2rem 6.75rem;
     }
 
     footer .copy {
