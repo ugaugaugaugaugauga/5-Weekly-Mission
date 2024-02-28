@@ -1,0 +1,12 @@
+/* user agent stylesheet 초기화 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 기본 16px -> 10px 적용 */
+html,
+body {
+  font-size: 62.5%;
+}
