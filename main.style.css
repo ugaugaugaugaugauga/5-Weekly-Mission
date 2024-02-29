@@ -34,12 +34,12 @@ nav {
   text-align: left;
   white-space: nowrap;
 }
-.start {
+.main {
   background-color: #f0f6ff;
   height: 953px;
   overflow: hidden;
 }
-.start-description {
+.main-description {
   font-family: Pretendard;
   font-size: 64px;
   font-weight: 700;
