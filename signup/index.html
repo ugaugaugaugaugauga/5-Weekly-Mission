@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/ui.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/preflight.css" />
+    <link rel="stylesheet" href="/css/container.css" />
+    <!-- 우선순위 1 -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <main class="auth-container">
+      <header class="auth-header-container text-md">
+        <a href="/"><img class="logo-lg" src="/imgs/logo.png" /></a>
+        <div>
+          이미 회원이신가요?
+          <a class="underline text-primary" href="../signin/index.html"
+            >로그인 하기</a
+          >
+        </div>
+      </header>
+      <form class="auth-form-container" action="">
+        <div class="auth-input-container">
+          <label class="text-sm" for="email">이메일</label>
+          <input
+            class="auth-input"
+            id="email"
+            type="text"
+            placeholder="codeit@codeit.com"
+          />
+        </div>
+        <div class="auth-input-container relative">
+          <label class="text-sm" for="password">비밀번호</label>
+          <input
+            class="auth-input"
+            id="password"
+            type="password"
+            placeholder="********"
+          />
+          <img class="icon-eye-box" src="imgs/eye-off.png" alt="eye-off" />
+        </div>
+        <div class="auth-input-container relative">
+          <label class="text-sm" for="password">비밀번호 확인</label>
+          <input
+            class="auth-input"
+            id="password"
+            type="password"
+            placeholder="********"
+          />
+          <img class="icon-eye-box" src="imgs/eye-off.png" alt="eye-off" />
+        </div>
+        <button class="mt-8 btn w-full bg-blue-to-cyan text-white">
+          회원가입
+        </button>
+        <footer class="auth-footer-container bg-gray-200">
+          <span class="text-sm">다른 방식으로 가입하기</span>
+          <div class="flex">
+            <a class="mr-3" href="https://www.google.com/"
+              ><img src="imgs/google.png" alt="google"
+            /></a>
+            <a href="https://www.kakaocorp.com/page"
+              ><img src="imgs/kakao.png" alt="kakao"
+            /></a>
+          </div>
+        </footer>
+      </form>
+    </main>
+  </body>
+</html>

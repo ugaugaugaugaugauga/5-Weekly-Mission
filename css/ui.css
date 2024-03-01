@@ -1,0 +1,99 @@
+.logo {
+  width: 133px;
+}
+
+.logo-lg {
+  width: 240px;
+}
+
+.hero-header {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.btn {
+  width: 128px;
+  height: 53px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-wide {
+  width: 200px;
+}
+
+.content-header {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.content-body {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.img-box {
+  margin-top: 30px;
+  width: auto;
+  border-radius: 15px;
+}
+
+.text-box {
+  width: none;
+}
+
+.icon-eye-box {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 23px;
+  right: 18px;
+}
+
+.auth-input {
+  margin-top: 12px;
+  padding: 18px 15px;
+  border: 1px var(--gray-400) solid;
+  border-radius: 8px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.footer-label-pos {
+  position: absolute;
+  top: 110px;
+}
+
+@media (min-width: 768px) {
+  .img-box {
+    margin-top: none;
+    width: 550px;
+    height: 450px;
+  }
+  .btn {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .btn-wide {
+    width: 350px;
+  }
+  .hero-header {
+    font-size: 48px;
+  }
+  .content-header {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .text-box {
+    width: 322px;
+  }
+  .footer-label-pos {
+    position: static;
+  }
+}
