@@ -1,23 +1,8 @@
-.mt-3 {
-  margin-top: 12px;
-}
 .mt-5 {
   margin-top: 20px;
 }
 .mt-8 {
   margin-top: 32px;
-}
-.mt-10 {
-  margin-top: 40px;
-}
-.mt-20 {
-  margin-top: 80px;
-}
-.mt-30 {
-  margin-top: 120px;
-}
-.mt-60 {
-  margin-top: 240px;
 }
 .mr-3 {
   margin-right: 12px;
@@ -26,13 +11,6 @@
   margin-right: 20px;
 }
 
-.pt-10 {
-  padding-top: 40px;
-}
-
-.w-350 {
-  width: 350px;
-}
 .w-full {
   width: 100%;
 }
@@ -49,10 +27,6 @@
   color: var(--primary);
 }
 
-.text-4xl {
-  font-size: 48px;
-}
-
 .text-sm {
   font-size: 14px;
 }
@@ -61,20 +35,8 @@
   font-size: 16px;
 }
 
-.text-lg {
-  font-size: 18px;
-}
-
 .underline {
   text-decoration: underline;
-}
-
-.font-weight-600 {
-  font-weight: 600;
-}
-
-.font-weight-700 {
-  font-weight: 700;
 }
 
 .text-center {
@@ -122,9 +84,6 @@
 .bg-gray-200 {
   background-color: var(--gray-200);
 }
-.bg-gray-300 {
-  background-color: var(--gray-300);
-}
 
 .bg-blue-to-cyan {
   background: linear-gradient(to right, #6d6afe, #6ae3fe);
@@ -146,25 +105,12 @@
   display: flex;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
 .items-center {
   align-items: center;
 }
 
 .gap-x-3 {
   column-gap: 12px;
-}
-
-.gap-y-5 {
-  row-gap: 20px;
 }
 
 .desktop-align {
