@@ -1,3 +1,5 @@
+/* container.css */
+
 .nav-container {
   position: sticky;
   top: 0;
@@ -85,16 +87,16 @@
   }
   .auth-form-container {
     width: 400px;
-    padding: none;
+    padding: 0;
   }
   .nav-container {
     padding: 20px 200px;
   }
   .hero-container {
-    padding: none;
+    padding: 0;
   }
   .content-container {
-    padding: none;
+    padding: 0;
     width: 998px;
     display: grid;
     grid-template-columns: 1fr 1fr;
