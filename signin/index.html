@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="/styles/common.css" />
     <link rel="stylesheet" href="/styles/ui.css" />
-
-    <!-- 우선순위 1 -->
-    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+    <script type="module" src="./js/main.js"></script>
     <main>
       <header>
         <a href="/"
@@ -26,28 +24,30 @@
       </header>
       <form action="">
         <div class="input-box">
-          <label class="text-sm" for="email">이메일</label>
+          <label class="text-sm" for="signIn-email">이메일</label>
           <input
             class="input"
-            id="email"
+            id="signIn-email"
             type="text"
             placeholder="codeit@codeit.com"
           />
         </div>
+        <div class="error-message" id="signIn-emailError"></div>
         <div class="input-box">
-          <label class="text-sm" for="password">비밀번호</label>
+          <label class="text-sm" for="signIn-password">비밀번호</label>
           <input
             class="input"
-            id="password"
+            id="signIn-password"
             type="password"
             placeholder="********"
           />
           <img
             class="show-pwd"
-            src="/assets/images/signup/eye-off.png"
+            src="/assets/images/signIn/eye-off.png"
             alt="eye-off"
           />
         </div>
+        <div class="error-message" id="signIn-passwordError"></div>
         <button class="btn btn-cta btn-w-full mt-10">로그인</button>
         <footer>
           <span class="text-sm">소셜 로그인</span>
