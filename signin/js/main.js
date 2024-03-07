@@ -1,5 +1,6 @@
 import attachFormValidation from './attachFormValidation.js'
 import attachInputValidation from './attachInputValidation.js'
+import attachTogglePasswordView from './attachTogglePasswordView.js'
 import { InputType } from '/type.js'
 
 function onDocumentReady() {
@@ -10,6 +11,7 @@ function onDocumentReady() {
     InputType.PASSWORD,
   )
   attachFormValidation()
+  attachTogglePasswordView()
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentReady)

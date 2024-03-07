@@ -53,12 +53,13 @@ form {
   row-gap: 12px;
 }
 
-.show-pwd {
+.eye-icon-position {
   width: 16px;
   height: 16px;
   position: absolute;
   bottom: 23px;
   right: 18px;
+  cursor: pointer;
 }
 
 footer {
