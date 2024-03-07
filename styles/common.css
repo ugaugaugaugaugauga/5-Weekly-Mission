@@ -1,3 +1,5 @@
+@import './reset.css';
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
@@ -6,6 +8,101 @@
   font-style: normal;
 }
 
+:root {
+  --primary: #6d6afe;
+  --red: #ff5b56;
+  --black: #111322;
+  --white: #ffffff;
+  --gray-600: #3e3e43;
+  --gray-500: #9fa6b2;
+  --gray-400: #ccd5e3;
+  --gray-300: #e7effb;
+  --gray-200: #e7effb;
+  --gray-100: #f0f6ff;
+}
+
 body {
   font-family: 'Pretendard-Regular';
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+.mt-8 {
+  margin-top: 32px;
+}
+.mt-10 {
+  margin-top: 40px;
+}
+.mt-20 {
+  margin-top: 80px;
+}
+
+.mr-3 {
+  margin-right: 12px;
+}
+.mr-5 {
+  margin-right: 20px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-gradient-purple-to-pink {
+  background-image: linear-gradient(to right, #6d6afe, #ff9f9f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-pink-to-blue {
+  background-image: linear-gradient(to right, #fe8a8a, #a4ceff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-yellow-to-blue {
+  background-image: linear-gradient(to right, #ffd88b, #6fbaff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-blue-to-yellow {
+  background-image: linear-gradient(to right, #6d7ccd, #52888538);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-cyan-to-red {
+  background-image: linear-gradient(to right, #68e8f9, #fe578f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-blue-to-cyan {
+  background: linear-gradient(to right, #6d6afe, #6ae3fe);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.desktop-order {
+  order: -1;
+
+  @media (max-width: 768px) {
+    order: initial;
+  }
+}
+
+.desktop-align {
+  justify-self: end;
+  @media (max-width: 768px) {
+    justify-self: none;
+  }
 }
