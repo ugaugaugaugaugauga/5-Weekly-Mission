@@ -10,10 +10,12 @@ export default function checkInput(inputId, errorId, type) {
     case InputType.EMAIL:
       if (input.value.trim() === '') {
         error.textContent = '이메일을 입력해 주세요.'
+        input.style.border = '2px solid red'
         return
       }
       if (!emailRegex.test(input.value.trim())) {
         error.textContent = '올바른 이메일 주소가 아닙니다.'
+        input.style.border = '2px solid red'
         return
       }
       error.textContent = ''
@@ -27,14 +29,17 @@ export default function checkInput(inputId, errorId, type) {
         'signup-passwordConfirmError',
       )
 
-      error.textContent =
-        input.value.trim() === '' ? '비밀번호를 입력해 주세요.' : ''
-
+      if (input.value.trim() === '') {
+        error.textContent = '비밀번호를 입력해 주세요.'
+        input.style.border = '2px solid red'
+        return
+      }
       if (
         passwordConfirmInput.value.trim() !== '' &&
         input.value.trim() !== passwordConfirmInput.value.trim()
       ) {
         passwordConfirmError.textContent = '비밀번호가 일치하지 않습니다.'
+        input.style.border = '2px solid red'
         return
       }
 
@@ -45,10 +50,12 @@ export default function checkInput(inputId, errorId, type) {
       const passwordInput = document.getElementById('signup-password')
       if (input.value.trim() === '') {
         error.textContent = '비밀번호 확인을 입력해 주세요.'
+        input.style.border = '2px solid red'
         return
       }
       if (input.value.trim() !== passwordInput.value.trim()) {
         error.textContent = '비밀번호가 일치하지 않습니다.'
+        input.style.border = '2px solid red'
         return
       }
       error.textContent = ''
