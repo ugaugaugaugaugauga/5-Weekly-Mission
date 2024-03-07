@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="/styles/common.css" />
     <link rel="stylesheet" href="/styles/ui.css" />
-
-    <!-- 우선순위 1 -->
-    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+    <script type="module" src="./js/main.js"></script>
     <main>
       <header>
         <a href="/"
@@ -26,19 +24,20 @@
       </header>
       <form action="">
         <div class="input-box">
-          <label class="text-sm" for="email">이메일</label>
+          <label class="text-sm" for="signup-email">이메일</label>
           <input
             class="input"
-            id="email"
+            id="signup-email"
             type="text"
             placeholder="codeit@codeit.com"
           />
         </div>
+        <div class="error-message" id="signup-emailError"></div>
         <div class="input-box">
-          <label class="text-sm" for="password">비밀번호</label>
+          <label class="text-sm" for="signup-password">비밀번호</label>
           <input
             class="input"
-            id="password"
+            id="signup-password"
             type="password"
             placeholder="********"
           />
@@ -48,11 +47,15 @@
             alt="eye-off"
           />
         </div>
+        <div class="error-message" id="signup-passwordError"></div>
+
         <div class="input-box">
-          <label class="text-sm" for="password">비밀번호 확인</label>
+          <label class="text-sm" for="signup-passwordConfirm"
+            >비밀번호 확인</label
+          >
           <input
             class="input"
-            id="password"
+            id="signup-passwordConfirm"
             type="password"
             placeholder="********"
           />
@@ -62,7 +65,11 @@
             alt="eye-off"
           />
         </div>
-        <button class="btn btn-cta btn-w-full mt-10">회원가입</button>
+        <div class="error-message" id="signup-passwordConfirmError"></div>
+
+        <button type="submit" class="btn btn-cta btn-w-full mt-10">
+          회원가입
+        </button>
         <footer>
           <span class="text-sm">다른 방식으로 가입하기</span>
           <div class="footer-sns">
