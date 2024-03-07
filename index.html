@@ -11,119 +11,122 @@
     <meta property="og:image" content="/imgs/image28.png" />
     <meta property="og:url" content="https://www.google.com" />
     <!-- css -->
-    <link rel="stylesheet" href="/css/ui.css" />
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/preflight.css" />
-    <link rel="stylesheet" href="/css/container.css" />
-    <!-- 우선순위 1 -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/ui.css" />
+    <link rel="stylesheet" href="./index.css" />
 
     <title>Linkbrary</title>
   </head>
   <body>
-    <nav class="nav-container bg-gray-100">
-      <a href="/"><img class="logo" src="imgs/logo.png" /></a>
-      <a href="/signin/index.html">
-        <button class="btn text-white bg-blue-to-cyan">로그인</button></a
-      >
+    <nav>
+      <div class="nav-box">
+        <a href="/"
+          ><img class="nav-logo" src="assets/images/home/logo.png"
+        /></a>
+        <a href="/signin/index.html">
+          <button class="btn btn-cta">로그인</button></a
+        >
+      </div>
     </nav>
-    <header class="hero-container bg-gray-100">
-      <h1 class="hero-header">
+    <header>
+      <h1 class="header-title mt-10">
         <span class="text-gradient-purple-to-pink">세상의 모든 정보</span
         >를<br />
         쉽게 저장하고 관리해 보세요
       </h1>
       <a href="signup/index.html" class="mt-5">
-        <button class="btn btn-wide text-white bg-blue-to-cyan">
-          링크 추가하기
-        </button>
+        <button class="btn btn-cta btn-wide">링크 추가하기</button>
       </a>
-      <img class="mt-10" src="imgs/hero.png" alt="hero" />
+      <img class="mt-10" src="assets/images/home/hero.png" alt="hero" />
     </header>
 
-    <main class="main-container">
-      <section class="content-container">
-        <div class="text-box">
+    <main>
+      <section class="content">
+        <div class="content-box">
           <h2 class="content-header">
             <span class="text-gradient-pink-to-blue">원하는 링크</span>를
             저장하세요
           </h2>
-          <p class="content-body text-muted">
+          <p class="content-body">
             나중에 릭고싶은 글, 다시보고싶은 영상, 사고싶은 옷, 기억하고 싶은
             모든 것을 한 공간에 저장하세요.
           </p>
         </div>
-        <img class="img-box" src="imgs/content1.png" alt="content1" />
+        <img
+          class="content-img"
+          src="assets/images/home/content1.png"
+          alt="content1"
+        />
       </section>
-      <section class="content-container">
-        <div class="text-box desktop-align">
+      <section class="content">
+        <div class="content-box desktop-align">
           <h2 class="content-header">
             링크를 폴더로<span class="text-gradient-yellow-to-blue">관리</span
             >하세요
           </h2>
-          <p class="content-body text-muted">
+          <p class="content-body">
             나만의 폴더를 무제한으로 만들고 다양하게 활용할 수 있습니다.
           </p>
         </div>
         <img
-          class="img-box desktop-order"
-          src="imgs/content2.png"
+          class="content-img desktop-order"
+          src="assets/images/home/content2.png"
           alt="content2"
         />
       </section>
 
-      <section class="content-container">
-        <div class="text-box">
+      <section class="content">
+        <div class="content-box">
           <h2 class="content-header">
             저장한 링크를<span class="text-gradient-blue-to-yellow">공유</span
             >해 보세요.
           </h2>
-          <p class="content-body text-muted">
+          <p class="content-body">
             여러 링크를 폴더에 담고 공유할 수 있습니다. 가족, 친구, 동료들에게
             쉽고 빠르게 링크를 공유해 보세요.
           </p>
         </div>
-        <img class="img-box" src="imgs/content3.png" alt="content3" />
+        <img
+          class="content-img"
+          src="assets/images/home/content3.png"
+          alt="content3"
+        />
       </section>
 
-      <section class="content-container">
-        <div class="text-box desktop-align">
+      <section class="content">
+        <div class="content-box desktop-align">
           <h2 class="content-header">
             저장한 링크를<span class="text-gradient-cyan-to-red">검색</span>해
             보세요
           </h2>
-          <p class="content-body text-muted">
-            중요한 정보들을 검색으로 쉽게 찾아보세요.
-          </p>
+          <p class="content-body">중요한 정보들을 검색으로 쉽게 찾아보세요.</p>
         </div>
         <img
-          class="img-box desktop-order"
-          src="imgs/content4.png"
-          alt="content4"
+          class="content-img desktop-order"
+          src="assets/images/home/content4.png"
+          alt="content3"
         />
       </section>
     </main>
-    <footer class="footer-container bg-black">
-      <div class="footer-items-container relative">
-        <span class="footer-label-pos text-md text-muted-2"
-          >@codeit - 2023</span
-        >
-        <div class="text-md text-white">
+    <footer>
+      <div class="footer-box">
+        <span class="footer-label">@codeit - 2023</span>
+        <div class="footer-privacy-policy">
           <a href="/privacy/index.html" class="mr-5">privacy Policy</a>
           <a href="/faq/index.html">FAQ</a>
         </div>
-        <div class="flex items-center gap-x-3">
+        <div class="footer-sns">
           <a href="https://www.facebook.com/" target="_blank">
-            <img src="imgs/facebook.png" alt="facebook" />
+            <img src="assets/images/home/facebook.png" alt="facebook" />
           </a>
           <a href="https://twitter.com/" target="_blank">
-            <img src="imgs/twitter.png" alt="twitter" />
+            <img src="assets/images/home/twitter.png" alt="twitter" />
           </a>
           <a href="https://www.youtube.com" target="_blank">
-            <img src="imgs/youtube.png" alt="youtube" />
+            <img src="assets/images/home/youtube.png" alt="youtube" />
           </a>
           <a href="https://www.instagram.com/" target="_blank">
-            <img src="imgs/insta.png" alt="insta" />
+            <img src="assets/images/home/insta.png" alt="insta" />
           </a>
         </div>
       </div>
