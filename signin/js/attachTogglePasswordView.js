@@ -5,13 +5,13 @@ export default function attachTogglePasswordView() {
 
   eyeOffIcon.addEventListener('click', () => {
     passwordInput.setAttribute('type', 'password')
-    eyeOffIcon.style.display = 'none'
-    eyeOnIcon.style.display = 'inline'
+    eyeOnIcon.style.display = 'none'
+    eyeOffIcon.style.display = 'inline'
   })
 
   eyeOnIcon.addEventListener('click', () => {
     passwordInput.setAttribute('type', 'text')
-    eyeOnIcon.style.display = 'none'
-    eyeOffIcon.style.display = 'inline'
+    eyeOffIcon.style.display = 'none'
+    eyeOnIcon.style.display = 'inline'
   })
 }
