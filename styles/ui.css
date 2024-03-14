@@ -36,3 +36,7 @@
   outline: none;
   border-color: var(--primary);
 }
+
+.input-error {
+  border: 2px solid red;
+}
