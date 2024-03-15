@@ -12,11 +12,7 @@ export default function handleSubmit(e) {
   const isConfirmPasswordValidate = !displayConfirmPasswordError()
 
   console.log(isEmailValidate, isPasswordValidate, isConfirmPasswordValidate)
-  if (
-    !isEmailValidate ||
-    !isConfirmPasswordValidate ||
-    !isConfirmPasswordValidate
-  )
+  if (!isEmailValidate || !isPasswordValidate || !isConfirmPasswordValidate)
     return
 
   // 이후 db 조회 이후 가입 절차
