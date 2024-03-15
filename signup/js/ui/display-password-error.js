@@ -1,8 +1,8 @@
 import validatePassword from '../utils/validate-password.js'
 
 export default function displayPasswordError() {
-  const password = document.getElementById('signIn-password')
-  const error = document.getElementById('signIn-passwordError')
+  const password = document.getElementById('signup-password')
+  const error = document.getElementById('signup-passwordError')
 
   const { success, message } = validatePassword(password.value)
 

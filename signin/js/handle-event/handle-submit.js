@@ -6,6 +6,7 @@ export default function handleSubmit(e) {
 
   const email = document.getElementById('signIn-email')
   const password = document.getElementById('signIn-password')
+  const form = document.getElementById('signIn-form')
 
   const emailValue = email.value
   const passwordValue = password.value
@@ -28,7 +29,7 @@ export default function handleSubmit(e) {
     return
   }
 
-  // db조회 이후 auth로직
+  // 이후 auth로직
 
   form.submit()
   window.location.href = '/folder'

@@ -1,8 +1,8 @@
 import validateEmail from '../utils/validate-email.js'
 
 export default function displayEmailError() {
-  const email = document.getElementById('signIn-email')
-  const error = document.getElementById('signIn-emailError')
+  const email = document.getElementById('signup-email')
+  const error = document.getElementById('signup-emailError')
 
   const { success, message } = validateEmail(email.value)
 
