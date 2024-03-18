@@ -22,7 +22,9 @@
           <a class="header-link" href="../signin/index.html">로그인 하기</a>
         </div>
       </header>
-      <form action="">
+
+      <form action="" id="signup-form">
+
         <div class="input-box">
           <label class="text-sm" for="signup-email">이메일</label>
           <input
@@ -42,30 +44,50 @@
             placeholder="********"
           />
           <img
+            id="eye-off"
             class="eye-icon-position"
-            src="/assets/images/signup/eye-off.png"
+            src="/assets/images/signIn/eye-off.png"
             alt="eye-off"
           />
+          <img
+            id="eye-on"
+            class="eye-icon-position"
+            src="/assets/images/signIn/eye-on.png"
+            alt="eye-on"
+            style="display: none"
+          />
+
         </div>
         <div class="error-message" id="signup-passwordError"></div>
 
         <div class="input-box">
-          <label class="text-sm" for="signup-passwordConfirm"
+          <label class="text-sm" for="signup-confirm-password"
             >비밀번호 확인</label
           >
           <input
             class="input"
-            id="signup-passwordConfirm"
+
+            id="signup-confirm-password"
+
             type="password"
             placeholder="********"
           />
           <img
+
+            id="confirm-eye-off"
             class="eye-icon-position"
-            src="/assets/images/signup/eye-off.png"
+            src="/assets/images/signIn/eye-off.png"
             alt="eye-off"
           />
+          <img
+            id="confirm-eye-on"
+            class="eye-icon-position"
+            src="/assets/images/signIn/eye-on.png"
+            alt="eye-on"
+            style="display: none"
+          />
         </div>
-        <div class="error-message" id="signup-passwordConfirmError"></div>
+        <div class="error-message" id="signup-confirm-password-error"></div>
 
         <button type="submit" class="btn btn-cta btn-w-full mt-10">
           회원가입
