@@ -1,3 +1,6 @@
+import redirectHomePage from '../../utils/redirect-home-page.js'
+import isLoggedIn from '../../utils/is-logged-in.js'
+
 import handleEmailFocusOut from './handle-event/handle-email-focus-out.js'
 import handleEmailFocusIn from './handle-event/handle-email-focus-in.js'
 import handlePasswordFocusOut from './handle-event/handle-password-focus-out.js'
@@ -19,14 +22,10 @@ import handleEyeOnIconClick from './handle-event/handle-eye-on-click.js'
 import handleConfirmEyeOffIconClick from './handle-event/handle-confirm-eye-off-click.js'
 import handleConfirmEyeOnIconClick from './handle-event/handle-confirm-eye-on-click.js'
 
-function checkTokenAndRedirect() {
-  const accessToken = localStorage.getItem('accessToken')
-  if (accessToken) {
-    window.location.href = '/folder'
-  }
+const checkLoggedIn = isLoggedIn()
+if (checkLoggedIn) {
+  redirectHomePage()
 }
-
-checkTokenAndRedirect()
 
 function onDocumentReady() {
   emailEl.addEventListener('focusout', handleEmailFocusOut)

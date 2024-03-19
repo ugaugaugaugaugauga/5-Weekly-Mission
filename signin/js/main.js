@@ -13,15 +13,13 @@ import {
   formEl,
   passwordEl,
 } from './get-element.js'
+import isLoggedIn from '../../utils/is-logged-in.js'
+import redirectHomePage from '../../utils/redirect-home-page.js'
 
-function checkTokenAndRedirect() {
-  const accessToken = localStorage.getItem('accessToken')
-  if (accessToken) {
-    window.location.href = '/folder'
-  }
+const checkLoggedIn = isLoggedIn()
+if (checkLoggedIn) {
+  redirectHomePage()
 }
-
-checkTokenAndRedirect()
 
 function onDocumentReady() {
   emailEl.addEventListener('focusout', handleEmailFocusOut)
