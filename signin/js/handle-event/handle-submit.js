@@ -31,6 +31,5 @@ export default function handleSubmit(e) {
 
   // 이후 auth로직
 
-  form.submit()
   window.location.href = '/folder'
 }

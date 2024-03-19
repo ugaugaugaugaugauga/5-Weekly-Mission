@@ -17,6 +17,5 @@ export default function handleSubmit(e) {
 
   // 이후 db 조회 이후 가입 절차
 
-  form.submit()
   window.location.href = '/folder'
 }
