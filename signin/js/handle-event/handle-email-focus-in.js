@@ -1,7 +1,6 @@
-export default function handleEmailFocusIn() {
-  const email = document.getElementById('signIn-email')
-  const error = document.getElementById('signIn-emailError')
+import { emailEl, emailErrorEl } from '../get-element.js'
+import hideInputError from '/ui/hide-input-error.js'
 
-  email.classList.remove('input-error')
-  error.textContent = ''
+export default function handleEmailFocusIn() {
+  hideInputError(emailEl, emailErrorEl)
 }

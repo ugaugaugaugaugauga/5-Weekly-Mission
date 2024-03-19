@@ -1,7 +1,6 @@
-export default function handlePasswordFocusIn() {
-  const password = document.getElementById('signIn-password')
-  const error = document.getElementById('signIn-passwordError')
+import { passwordEl, passwordErrorEl } from '../get-element.js'
+import hideInputError from '/ui/hide-input-error.js'
 
-  password.classList.remove('input-error')
-  error.textContent = ''
+export default function handlePasswordFocusIn() {
+  hideInputError(passwordEl, passwordErrorEl)
 }

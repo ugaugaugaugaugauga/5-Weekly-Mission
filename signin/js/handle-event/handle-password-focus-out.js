@@ -1,5 +1,10 @@
-import displayPasswordError from '../ui/display-password-error.js'
+import { passwordEl, passwordErrorEl } from '../get-element.js'
+import validatePassword from '../utils/validate-password.js'
 
 export default function handlePasswordFocusOut() {
-  displayPasswordError()
+  const { success, message } = validatePassword(passwordEl)
+  if (!success) {
+    displayInputError(passwordEl, passwordErrorEl, message)
+  }
+  return null
 }

@@ -1,35 +1,45 @@
-import displayEmailError from '../ui/display-email-error.js'
-import displayPasswordError from '../ui/display-password-error.js'
+import login from '/api/login.js'
+import {
+  emailEl,
+  emailErrorEl,
+  passwordEl,
+  passwordErrorEl,
+} from '../get-element.js'
+import displayInputError from '/ui/display-input-error.js'
+import validateEmail from '../utils/validate-email.js'
+import validatePassword from '../utils/validate-password.js'
 
 export default function handleSubmit(e) {
   e.preventDefault()
 
-  const email = document.getElementById('signIn-email')
-  const password = document.getElementById('signIn-password')
-  const form = document.getElementById('signIn-form')
+  const isValidEmail = validateEmail(emailEl)
 
-  const emailValue = email.value
-  const passwordValue = password.value
-
-  const testEmail = 'test@codeit.com'
-  const testPassword = 'codeit101'
-
-  const isEmailValidate = !displayEmailError()
-  const isPasswordValidate = !displayPasswordError()
-
-  console.log(isEmailValidate, isPasswordValidate)
-
-  if (emailValue !== testEmail) {
-    console.log('존재하지 않는 이메일')
-    return
+  if (!isValidEmail.success) {
+    return displayInputError(emailEl, emailErrorEl, isValidEmail.message)
   }
 
-  if (passwordValue !== testPassword) {
-    console.log('패스워드가 일치하지 않습니다.')
-    return
+  const isValidPassword = validatePassword(passwordEl)
+
+  if (!isValidPassword.success) {
+    return displayInputError(
+      passwordEl,
+      passwordErrorEl,
+      isValidPassword.message,
+    )
   }
 
-  // 이후 auth로직
+  const email = emailEl.value
+  const password = passwordEl.value
 
-  window.location.href = '/folder'
+  const isLogin = login(email, password)
+
+  if (!isLogin.success && isLogin.error === 'email') {
+    displayInputError(emailEl, emailErrorEl, isLogin.message)
+  }
+  if (!isLogin.success && isLogin.error === 'password') {
+    displayInputError(passwordEl, passwordErrorEl, isLogin.message)
+  }
+  if (isLogin.success) {
+    window.location.href = '/folder'
+  }
 }

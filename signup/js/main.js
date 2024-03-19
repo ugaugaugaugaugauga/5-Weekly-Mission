@@ -3,49 +3,40 @@ import handleEmailFocusIn from './handle-event/handle-email-focus-in.js'
 import handlePasswordFocusOut from './handle-event/handle-password-focus-out.js'
 import handlePasswordFocusIn from './handle-event/handle-password-focus-in.js'
 import handleSubmit from './handle-event/handle-submit.js'
-import {
-  showPasswordAndEyeOn,
-  hidePasswordAndEyeOff,
-} from './handle-event/handle-toggle-icon.js'
 import handleKeyUp from './handle-event/handle-key-up.js'
-
-const email = document.getElementById('signup-email')
-const password = document.getElementById('signup-password')
-const passwordEyeOffIcon = document.getElementById('eye-off')
-const passwordEyeOnIcon = document.getElementById('eye-on')
-const confirmPasswordEyeOffIcon = document.getElementById('confirm-eye-off')
-const confirmPasswordEyeOnIcon = document.getElementById('confirm-eye-on')
-const confirmPassword = document.getElementById('signup-confirm-password')
-const form = document.querySelector('form')
+import {
+  confirmPasswordEl,
+  confirmPasswordEyeOffIconEl,
+  confirmPasswordEyeOnIconEl,
+  emailEl,
+  formEl,
+  passwordEl,
+  passwordEyeOffIconEl,
+  passwordEyeOnIconEl,
+} from './get-elements.js'
+import handleEyeOffIconClick from './handle-event/handle-eye-off-click.js'
+import handleEyeOnIconClick from './handle-event/handle-eye-on-click.js'
+import handleConfirmEyeOffIconClick from './handle-event/handle-confirm-eye-off-click.js'
+import handleConfirmEyeOnIconClick from './handle-event/handle-confirm-eye-on-click.js'
 
 function onDocumentReady() {
-  email.addEventListener('focusout', handleEmailFocusOut)
-  email.addEventListener('focusin', handleEmailFocusIn)
-  password.addEventListener('focusout', handlePasswordFocusOut)
-  password.addEventListener('focusin', handlePasswordFocusIn)
-  password.addEventListener('keyup', handleKeyUp)
-  confirmPassword.addEventListener('keyup', handleKeyUp)
-  form.addEventListener('submit', handleSubmit)
-  passwordEyeOffIcon.addEventListener('click', () => {
-    showPasswordAndEyeOn(password, passwordEyeOffIcon, passwordEyeOnIcon)
-  })
-  passwordEyeOnIcon.addEventListener('click', () => {
-    hidePasswordAndEyeOff(password, passwordEyeOffIcon, passwordEyeOnIcon)
-  })
-  confirmPasswordEyeOffIcon.addEventListener('click', () => {
-    showPasswordAndEyeOn(
-      confirmPassword,
-      confirmPasswordEyeOffIcon,
-      confirmPasswordEyeOnIcon,
-    )
-  })
-  confirmPasswordEyeOnIcon.addEventListener('click', () => {
-    hidePasswordAndEyeOff(
-      confirmPassword,
-      confirmPasswordEyeOffIcon,
-      confirmPasswordEyeOnIcon,
-    )
-  })
+  emailEl.addEventListener('focusout', handleEmailFocusOut)
+  emailEl.addEventListener('focusin', handleEmailFocusIn)
+  passwordEl.addEventListener('focusout', handlePasswordFocusOut)
+  passwordEl.addEventListener('focusin', handlePasswordFocusIn)
+  passwordEl.addEventListener('keyup', handleKeyUp)
+  confirmPasswordEl.addEventListener('keyup', handleKeyUp)
+  formEl.addEventListener('submit', handleSubmit)
+  passwordEyeOffIconEl.addEventListener('click', handleEyeOffIconClick)
+  passwordEyeOnIconEl.addEventListener('click', handleEyeOnIconClick)
+  confirmPasswordEyeOffIconEl.addEventListener(
+    'click',
+    handleConfirmEyeOffIconClick,
+  )
+  confirmPasswordEyeOnIconEl.addEventListener(
+    'click',
+    handleConfirmEyeOnIconClick,
+  )
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentReady)
