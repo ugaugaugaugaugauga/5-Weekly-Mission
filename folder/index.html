@@ -3,9 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Folder Page</title>
   </head>
   <body>
-    folder Page
+    <h1>Folder Page</h1>
+    <button id="logoutButton">로그아웃</button>
+
+    <script>
+      document
+        .getElementById('logoutButton')
+        .addEventListener('click', function () {
+          localStorage.removeItem('accessToken')
+          window.location.href = '/signin/index.html'
+        })
+    </script>
   </body>
 </html>

@@ -11,9 +11,9 @@ import {
 import validateEmail from '../utils/validate-email.js'
 import validatePassword from '../utils/validate-password.js'
 import validateConfirmPassword from '../utils/validate-confirm-password.js'
-import register from '../../../api/register.js'
+import register from '../../../action/register.js'
 
-export default function handleSubmit(e) {
+export default async function handleSubmit(e) {
   e.preventDefault()
 
   const isValidEmail = validateEmail(emailEl)
@@ -47,13 +47,17 @@ export default function handleSubmit(e) {
 
   const email = emailEl.value
   const password = passwordEl.value
-  // 이후 db 조회 이후 가입 절차
-  const isRegistered = register(email, password)
-  if (!isRegistered.success && isRegistered.error == 'email') {
+
+  const isRegistered = await register(email, password)
+  if (
+    !isRegistered.success &&
+    !!isRegistered.error &&
+    isRegistered.error == 'email'
+  ) {
     return displayInputError(emailEl, emailErrorEl, isRegistered.message)
   }
-
   if (isRegistered.success) {
     window.location.href = '/folder'
+    return
   }
 }

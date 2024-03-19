@@ -19,6 +19,15 @@ import handleEyeOnIconClick from './handle-event/handle-eye-on-click.js'
 import handleConfirmEyeOffIconClick from './handle-event/handle-confirm-eye-off-click.js'
 import handleConfirmEyeOnIconClick from './handle-event/handle-confirm-eye-on-click.js'
 
+function checkTokenAndRedirect() {
+  const accessToken = localStorage.getItem('accessToken')
+  if (accessToken) {
+    window.location.href = '/folder'
+  }
+}
+
+checkTokenAndRedirect()
+
 function onDocumentReady() {
   emailEl.addEventListener('focusout', handleEmailFocusOut)
   emailEl.addEventListener('focusin', handleEmailFocusIn)

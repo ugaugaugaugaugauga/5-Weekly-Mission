@@ -14,6 +14,15 @@ import {
   passwordEl,
 } from './get-element.js'
 
+function checkTokenAndRedirect() {
+  const accessToken = localStorage.getItem('accessToken')
+  if (accessToken) {
+    window.location.href = '/folder'
+  }
+}
+
+checkTokenAndRedirect()
+
 function onDocumentReady() {
   emailEl.addEventListener('focusout', handleEmailFocusOut)
   emailEl.addEventListener('focusin', handleEmailFocusIn)
