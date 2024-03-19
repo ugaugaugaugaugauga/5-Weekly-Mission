@@ -19,7 +19,6 @@ export default async function register(email, password) {
     if (responseData.error) {
       return {
         success: false,
-        error: 'email',
         message: '이미 존재하는 이메일 입니다.',
       }
     }
@@ -27,9 +26,9 @@ export default async function register(email, password) {
       localStorage.setItem('accessToken', responseData.data.accessToken)
       return { success: true }
     }
-    return { success: false }
+    return { success: false, message: '서버 에러' }
   } catch (error) {
     console.log('Error:', error)
-    return { success: false }
+    return { success: false, message: '서버 에러' }
   }
 }

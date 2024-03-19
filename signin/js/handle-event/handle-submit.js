@@ -1,3 +1,4 @@
+import redirectHomePage from '../../../utils/redirect-home-page.js'
 import login from '../../../action/login.js'
 import {
   emailEl,
@@ -33,5 +34,5 @@ export default async function handleSubmit(e) {
     return
   }
 
-  window.location.href = '/folder'
+  redirectHomePage()
 }

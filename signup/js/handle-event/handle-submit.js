@@ -1,3 +1,5 @@
+import register from '../../../action/register.js'
+import redirectHomePage from '../../../utils/redirect-home-page.js'
 import displayInputError from '../../../ui/display-input-error.js'
 
 import {
@@ -11,7 +13,6 @@ import {
 import validateEmail from '../utils/validate-email.js'
 import validatePassword from '../utils/validate-password.js'
 import validateConfirmPassword from '../utils/validate-confirm-password.js'
-import register from '../../../action/register.js'
 
 export default async function handleSubmit(e) {
   e.preventDefault()
@@ -49,15 +50,9 @@ export default async function handleSubmit(e) {
   const password = passwordEl.value
 
   const isRegistered = await register(email, password)
-  if (
-    !isRegistered.success &&
-    !!isRegistered.error &&
-    isRegistered.error == 'email'
-  ) {
+  if (!isRegistered.success) {
     return displayInputError(emailEl, emailErrorEl, isRegistered.message)
   }
-  if (isRegistered.success) {
-    window.location.href = '/folder'
-    return
-  }
+
+  redirectHomePage()
 }
