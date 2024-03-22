@@ -1,27 +1,34 @@
-import handleEmailFocusOut from './handle-event/handle-email-focus-out.js'
 import handleEmailFocusIn from './handle-event/handle-email-focus-in.js'
 import handlePasswordFocusOut from './handle-event/handle-password-focus-out.js'
 import handlePasswordFocusIn from './handle-event/handle-password-focus-in.js'
 import handleSubmit from './handle-event/handle-submit.js'
-import {
-  showPasswordAndEyeOn,
-  hidePasswordAndEyeOff,
-} from './handle-event/handle-toggle-icon.js'
+import handleEmailFocusOut from './handle-event/handle-email-focus-out.js'
+import handleEyeOffIconClick from './handle-event/handle-eye-off-click.js'
+import handleEyeOnIconClick from './handle-event/handle-eye-on-click.js'
 
-const email = document.getElementById('signIn-email')
-const password = document.getElementById('signIn-password')
-const form = document.querySelector('form')
-const eyeOffIcon = document.getElementById('eye-off')
-const eyeOnIcon = document.getElementById('eye-on')
+import {
+  emailEl,
+  eyeOffIconEl,
+  eyeOnIconEl,
+  formEl,
+  passwordEl,
+} from './get-element.js'
+import isLoggedIn from '../../utils/is-logged-in.js'
+import redirectHomePage from '../../utils/redirect-home-page.js'
+
+const checkLoggedIn = isLoggedIn()
+if (checkLoggedIn) {
+  redirectHomePage()
+}
 
 function onDocumentReady() {
-  email.addEventListener('focusout', handleEmailFocusOut)
-  email.addEventListener('focusin', handleEmailFocusIn)
-  password.addEventListener('focusout', handlePasswordFocusOut)
-  password.addEventListener('focusin', handlePasswordFocusIn)
-  form.addEventListener('submit', handleSubmit)
-  eyeOffIcon.addEventListener('click', showPasswordAndEyeOn)
-  eyeOnIcon.addEventListener('click', hidePasswordAndEyeOff)
+  emailEl.addEventListener('focusout', handleEmailFocusOut)
+  emailEl.addEventListener('focusin', handleEmailFocusIn)
+  passwordEl.addEventListener('focusout', handlePasswordFocusOut)
+  passwordEl.addEventListener('focusin', handlePasswordFocusIn)
+  formEl.addEventListener('submit', handleSubmit)
+  eyeOffIconEl.addEventListener('click', handleEyeOffIconClick)
+  eyeOnIconEl.addEventListener('click', handleEyeOnIconClick)
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentReady)

@@ -1,22 +1,58 @@
-import displayConfirmPasswordError from '../ui/display-confirm-password-error.js'
-import displayEmailError from '../ui/display-email-error.js'
-import displayPasswordError from '../ui/display-password-error.js'
+import register from '../../../action/register.js'
+import redirectHomePage from '../../../utils/redirect-home-page.js'
+import displayInputError from '../../../ui/display-input-error.js'
 
-export default function handleSubmit(e) {
+import {
+  confirmPasswordEl,
+  confirmPasswordErrorEl,
+  emailEl,
+  emailErrorEl,
+  passwordEl,
+  passwordErrorEl,
+} from '../get-elements.js'
+import validateEmail from '../utils/validate-email.js'
+import validatePassword from '../utils/validate-password.js'
+import validateConfirmPassword from '../utils/validate-confirm-password.js'
+
+export default async function handleSubmit(e) {
   e.preventDefault()
 
-  const form = document.getElementById('signup-form')
+  const isValidEmail = validateEmail(emailEl)
 
-  const isEmailValidate = !displayEmailError()
-  const isPasswordValidate = !displayPasswordError()
-  const isConfirmPasswordValidate = !displayConfirmPasswordError()
+  if (!isValidEmail.success) {
+    return displayInputError(emailEl, emailErrorEl, isValidEmail.message)
+  }
 
-  console.log(isEmailValidate, isPasswordValidate, isConfirmPasswordValidate)
-  if (!isEmailValidate || !isPasswordValidate || !isConfirmPasswordValidate)
-    return
+  const isValidPassword = validatePassword(passwordEl)
 
-  // 이후 db 조회 이후 가입 절차
+  if (!isValidPassword.success) {
+    return displayInputError(
+      passwordEl,
+      passwordErrorEl,
+      isValidPassword.message,
+    )
+  }
 
-  form.submit()
-  window.location.href = '/folder'
+  const isValidConfirmPassword = validateConfirmPassword(
+    passwordEl,
+    confirmPasswordEl,
+  )
+
+  if (!isValidConfirmPassword.success) {
+    return displayInputError(
+      confirmPasswordEl,
+      confirmPasswordErrorEl,
+      isValidConfirmPassword.message,
+    )
+  }
+
+  const email = emailEl.value
+  const password = passwordEl.value
+
+  const isRegistered = await register(email, password)
+  if (!isRegistered.success) {
+    return displayInputError(emailEl, emailErrorEl, isRegistered.message)
+  }
+
+  redirectHomePage()
 }

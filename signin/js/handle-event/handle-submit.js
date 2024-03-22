@@ -1,36 +1,38 @@
-import displayEmailError from '../ui/display-email-error.js'
-import displayPasswordError from '../ui/display-password-error.js'
+import redirectHomePage from '../../../utils/redirect-home-page.js'
+import login from '../../../action/login.js'
+import {
+  emailEl,
+  emailErrorEl,
+  passwordEl,
+  passwordErrorEl,
+} from '../get-element.js'
+import displayInputError from '/ui/display-input-error.js'
+import validateEmail from '../utils/validate-email.js'
+import validatePassword from '../utils/validate-password.js'
 
-export default function handleSubmit(e) {
+export default async function handleSubmit(e) {
   e.preventDefault()
-
-  const email = document.getElementById('signIn-email')
-  const password = document.getElementById('signIn-password')
-  const form = document.getElementById('signIn-form')
-
-  const emailValue = email.value
-  const passwordValue = password.value
-
-  const testEmail = 'test@codeit.com'
-  const testPassword = 'codeit101'
-
-  const isEmailValidate = !displayEmailError()
-  const isPasswordValidate = !displayPasswordError()
-
-  console.log(isEmailValidate, isPasswordValidate)
-
-  if (emailValue !== testEmail) {
-    console.log('존재하지 않는 이메일')
+  const isValidEmail = validateEmail(emailEl)
+  if (!isValidEmail.success) {
+    displayInputError(emailEl, emailErrorEl, isValidEmail.message)
     return
   }
 
-  if (passwordValue !== testPassword) {
-    console.log('패스워드가 일치하지 않습니다.')
+  const isValidPassword = validatePassword(passwordEl)
+
+  if (!isValidPassword.success) {
+    displayInputError(passwordEl, passwordErrorEl, isValidPassword.message)
     return
   }
 
-  // 이후 auth로직
+  const email = emailEl.value
+  const password = passwordEl.value
+  const isLogin = await login(email, password)
 
-  form.submit()
-  window.location.href = '/folder'
+  if (!isLogin.success) {
+    displayInputError(emailEl, emailErrorEl, isLogin.message)
+    return
+  }
+
+  redirectHomePage()
 }
