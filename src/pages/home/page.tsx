@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { UserImg } from '@/components/user-img'
+import { UserButton } from '@/components/user-button'
 import { SearchBar } from './_components/search-bar'
 import { useEffect, useState } from 'react'
 import { Folder, fetchFolderData } from '@/api/get-folder-data'
@@ -33,7 +33,7 @@ const HomePage = () => {
         )}
         {!isLoading && folderData && (
           <>
-            <UserImg url={folderData.owner.profileImageSource} size='xl' />
+            <UserButton url={folderData.owner.profileImageSource} size='xl' />
             <p className='mt-2 text-sm text-gray-700'>
               @{folderData.owner.name}
             </p>

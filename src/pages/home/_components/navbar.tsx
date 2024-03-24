@@ -1,6 +1,6 @@
 import { UserData, fetchUserData } from '@/api/get-user-data'
 import { Button } from '@/components/ui/button'
-import { UserImg } from '@/components/user-img'
+import { UserButton } from '@/components/user-button'
 import { Loader } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
@@ -25,7 +25,7 @@ export const Navbar = () => {
         {!isLoading &&
           (userData ? (
             <>
-              <UserImg url={userData.profileImageSource} />
+              <UserButton url={userData.profileImageSource} />
               <p className='ml-3'>{userData.email}</p>
             </>
           ) : (

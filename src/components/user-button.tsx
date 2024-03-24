@@ -6,7 +6,7 @@ type Props = {
   size?: 'sm' | 'lg' | 'xl'
 }
 
-export const UserImg = ({ url, size }: Props) => {
+export const UserButton = ({ url, size }: Props) => {
   return (
     <Avatar
       className={cn(
