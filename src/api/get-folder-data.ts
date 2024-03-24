@@ -23,12 +23,12 @@ export interface Folder {
   count: number
 }
 
-const url = 'https://bootcamp-api.codeit.kr/api/sample/folder'
-
 export const fetchFolderData = async (): Promise<Folder | null> => {
   try {
     await new Promise((resolve) => setTimeout(resolve, 100))
-    const response = await axios.get(url)
+    const response = await axios.get(
+      `${import.meta.env.VITE_BASE_URL}/sample/folder`,
+    )
     return response.data.folder
   } catch (error) {
     console.error('요청 실패:', error)

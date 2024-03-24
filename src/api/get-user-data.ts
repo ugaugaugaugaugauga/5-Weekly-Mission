@@ -6,12 +6,12 @@ export interface UserData {
   profileImageSource: string
 }
 
-const url = 'https://bootcamp-api.codeit.kr/api/sample/user'
-
 export const fetchUserData = async (): Promise<UserData | null> => {
   try {
     await new Promise((resolve) => setTimeout(resolve, 100))
-    const response = await axios.get<UserData>(url)
+    const response = await axios.get<UserData>(
+      `${import.meta.env.VITE_BASE_URL}/sample/folder`,
+    )
     return response.data
   } catch (error) {
     console.error('요청 실패:', error)
