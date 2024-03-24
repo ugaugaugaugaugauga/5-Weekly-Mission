@@ -1,20 +1,37 @@
-import { UserData, fetchUserData } from '@/api/get-user-data'
-import { Button } from '@/components/ui/button'
-import { UserButton } from '@/components/user-button'
+import axios from 'axios'
 import { Loader } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
+import { Button } from '@/components/ui/button'
+import { UserButton } from '@/components/user-button'
+
+interface UserData {
+  name: string
+  email: string
+  profileImageSource: string
+}
+
 export const Navbar = () => {
-  const [userData, setUserData] = useState<UserData | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [userData, setUserData] = useState<UserData>()
+  const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchUserData()
-      setUserData(data)
-      setIsLoading(false)
+    const fetchUser = async () => {
+      try {
+        setIsLoading(true)
+        await new Promise((resolve) => setTimeout(resolve, 100))
+        const response = await axios.get<UserData>(
+          `${import.meta.env.VITE_BASE_URL}/sample/user`,
+        )
+        const user = response.data
+        setUserData(user)
+      } catch (error) {
+        console.error('요청 실패:', error)
+      } finally {
+        setIsLoading(false)
+      }
     }
-    fetchData()
+    fetchUser()
   }, [])
 
   return (

@@ -2,21 +2,53 @@ import { Button } from '@/components/ui/button'
 import { UserButton } from '@/components/user-button'
 import { SearchBar } from './_components/search-bar'
 import { useEffect, useState } from 'react'
-import { Folder, fetchFolderData } from '@/api/get-folder-data'
 import { Card, SkeletonCard } from '@/components/card'
 import { Skeleton } from '@/components/ui/skeleton'
+import axios from 'axios'
+
+interface Link {
+  id: number
+  createdAt: string
+  url: string
+  title: string
+  description: string
+  imageSource?: string
+}
+
+interface Owner {
+  id: number
+  name: string
+  profileImageSource: string
+}
+
+interface Folder {
+  id: number
+  name: string
+  owner: Owner
+  links: Link[]
+  count: number
+}
 
 const HomePage = () => {
-  const [folderData, setFolderData] = useState<Folder | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [folderData, setFolderData] = useState<Folder>()
+  const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchFolderData()
-      setFolderData(data)
-      setIsLoading(false)
+    const fetchFolder = async () => {
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 100))
+        const response = await axios.get(
+          `${import.meta.env.VITE_BASE_URL}/sample/folder`,
+        )
+        const folder = response.data.folder
+        setFolderData(folder)
+      } catch (error) {
+        console.error('요청 실패:', error)
+      } finally {
+        setIsLoading(false)
+      }
     }
-    fetchData()
+    fetchFolder()
   }, [])
 
   return (
