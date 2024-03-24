@@ -13,8 +13,8 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchFolderData()
-      setFolderData(data)
       setIsLoading(false)
+      setFolderData(data)
     }
     fetchData()
   }, [])
@@ -63,6 +63,7 @@ const HomePage = () => {
                 createdAt={link.createdAt}
               />
             ))}
+          {!isLoading && !folderData && <div>콘탠츠가 존재하지 않습니다.</div>}
         </div>
       </section>
     </main>
