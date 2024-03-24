@@ -1,5 +1,6 @@
 import { formatDate, getTimeDifference } from '@/lib/date'
 import { Skeleton } from '@/components/ui/skeleton'
+import { ImageOff } from 'lucide-react'
 
 type Props = {
   content: string
@@ -9,11 +10,18 @@ type Props = {
 
 export const Card = ({ content, url, createdAt }: Props) => {
   return (
-    <article className='hover:scale-110 transition flex flex-col rounded-xl shadow-lg'>
-      <img
-        src={url}
-        className='aspect-video rounded-t-xl object-cover object-center'
-      />
+    <article className='hover:scale-110 transition flex flex-col rounded-xl shadow-lg cursor-pointer'>
+      {url ? (
+        <img
+          src={url}
+          className='aspect-video rounded-t-xl object-cover object-center'
+        />
+      ) : (
+        <div className='aspect-video rounded-t-xl flex justify-center items-center bg-gray-100'>
+          <ImageOff className='h-16 w-16 text-gray-700' />
+        </div>
+      )}
+
       <div className='p-5 space-y-3'>
         <div className='text-sm text-muted-foreground'>
           {getTimeDifference(createdAt)}
