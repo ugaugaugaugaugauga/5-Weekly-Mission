@@ -10,7 +10,7 @@ export const fetchUserData = async (): Promise<UserData | null> => {
   try {
     await new Promise((resolve) => setTimeout(resolve, 100))
     const response = await axios.get<UserData>(
-      `${import.meta.env.VITE_BASE_URL}/sample/folder`,
+      `${import.meta.env.VITE_BASE_URL}/sample/user`,
     )
     return response.data
   } catch (error) {
