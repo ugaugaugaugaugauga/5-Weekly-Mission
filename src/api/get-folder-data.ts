@@ -27,7 +27,7 @@ const url = 'https://bootcamp-api.codeit.kr/api/sample/folder'
 
 export const fetchFolderData = async (): Promise<Folder | null> => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 500))
+    await new Promise((resolve) => setTimeout(resolve, 100))
     const response = await axios.get(url)
     return response.data.folder
   } catch (error) {

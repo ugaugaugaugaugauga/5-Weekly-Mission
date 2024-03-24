@@ -7,14 +7,14 @@ import { Card, SkeletonCard } from '@/components/card'
 import { Skeleton } from '@/components/ui/skeleton'
 
 const HomePage = () => {
-  const [folderData, setFolderData] = useState<Folder | null>()
+  const [folderData, setFolderData] = useState<Folder | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchFolderData()
-      setIsLoading(false)
       setFolderData(data)
+      setIsLoading(false)
     }
     fetchData()
   }, [])
@@ -54,16 +54,21 @@ const HomePage = () => {
               <SkeletonCard key={index} />
             ))}
           {!isLoading &&
-            folderData &&
-            folderData.links.map((link) => (
-              <Card
-                key={link.id}
-                content={link.description}
-                url={link.imageSource!}
-                createdAt={link.createdAt}
-              />
+            (folderData ? (
+              folderData.links.map((link) => (
+                <Card
+                  key={link.id}
+                  id={link.id}
+                  content={link.description}
+                  url={link.imageSource!}
+                  createdAt={link.createdAt}
+                />
+              ))
+            ) : (
+              <div className='flex justify-center text-5xl font-bold col-span-3'>
+                콘탠츠가 존재하지 않습니다.
+              </div>
             ))}
-          {!isLoading && !folderData && <div>콘탠츠가 존재하지 않습니다.</div>}
         </div>
       </section>
     </main>

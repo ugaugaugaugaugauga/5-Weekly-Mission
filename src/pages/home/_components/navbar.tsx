@@ -11,8 +11,8 @@ export const Navbar = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchUserData()
-      setIsLoading(false)
       setUserData(data)
+      setIsLoading(false)
     }
     fetchData()
   }, [])
@@ -22,16 +22,17 @@ export const Navbar = () => {
       <img src='/logo.png' alt='logo' />
       <div className='flex items-center'>
         {isLoading && <Loader className='animate-spin' />}
-        {!isLoading && userData ? (
-          <>
-            <UserImg url={userData.profileImageSource} />
-            <p className='ml-3'>{userData.email}</p>
-          </>
-        ) : (
-          <Button variant={'primary'} className='rounded-md '>
-            로그인
-          </Button>
-        )}
+        {!isLoading &&
+          (userData ? (
+            <>
+              <UserImg url={userData.profileImageSource} />
+              <p className='ml-3'>{userData.email}</p>
+            </>
+          ) : (
+            <Button variant={'primary'} className='rounded-md '>
+              로그인
+            </Button>
+          ))}
       </div>
     </nav>
   )

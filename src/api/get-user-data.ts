@@ -10,7 +10,7 @@ const url = 'https://bootcamp-api.codeit.kr/api/sample/user'
 
 export const fetchUserData = async (): Promise<UserData | null> => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 500))
+    await new Promise((resolve) => setTimeout(resolve, 100))
     const response = await axios.get<UserData>(url)
     return response.data
   } catch (error) {
