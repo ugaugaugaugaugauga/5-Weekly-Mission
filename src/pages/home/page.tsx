@@ -4,30 +4,7 @@ import { SearchBar } from './_components/search-bar'
 import { useEffect, useState } from 'react'
 import { Card, SkeletonCard } from '@/components/card'
 import { Skeleton } from '@/components/ui/skeleton'
-import axios from 'axios'
-
-interface Link {
-  id: number
-  createdAt: string
-  url: string
-  title: string
-  description: string
-  imageSource?: string
-}
-
-interface Owner {
-  id: number
-  name: string
-  profileImageSource: string
-}
-
-interface Folder {
-  id: number
-  name: string
-  owner: Owner
-  links: Link[]
-  count: number
-}
+import { Folder, getFolderData } from '@/data/get-folder-data'
 
 const HomePage = () => {
   const [folderData, setFolderData] = useState<Folder>()
@@ -36,11 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchFolder = async () => {
       try {
-        await new Promise((resolve) => setTimeout(resolve, 100))
-        const response = await axios.get<{ folder: Folder }>(
-          `${import.meta.env.VITE_BASE_URL}/sample/folder`,
-        )
-        const folder = response.data.folder
+        const folder = await getFolderData()
         setFolderData(folder)
       } catch (error) {
         console.error('요청 실패:', error)

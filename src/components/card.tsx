@@ -13,12 +13,14 @@ type Props = {
 export const Card = ({ id, content, url, createdAt }: Props) => {
   return (
     <Link to={`/link/${id}`}>
-      <article className='hover:scale-110 transition flex flex-col rounded-xl shadow-lg cursor-pointer'>
+      <article className='group transition flex flex-col rounded-xl shadow-lg cursor-pointer'>
         {url ? (
-          <img
-            src={url}
-            className='aspect-video rounded-t-xl object-cover object-center'
-          />
+          <div className='overflow-hidden aspect-video rounded-t-xl flex items-center justify-center'>
+            <img
+              src={url}
+              className='group-hover:scale-125 transition duration-300 object-cover object-center'
+            />
+          </div>
         ) : (
           <div className='aspect-video rounded-t-xl flex justify-center items-center bg-gray-100'>
             <ImageOff className='h-16 w-16 text-gray-700' />

@@ -1,15 +1,9 @@
-import axios from 'axios'
 import { Loader } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { UserButton } from '@/components/user-button'
-
-interface UserData {
-  name: string
-  email: string
-  profileImageSource: string
-}
+import { UserData, getUserData } from '@/data/get-user-data'
 
 export const Navbar = () => {
   const [userData, setUserData] = useState<UserData>()
@@ -19,11 +13,7 @@ export const Navbar = () => {
     const fetchUser = async () => {
       try {
         setIsLoading(true)
-        await new Promise((resolve) => setTimeout(resolve, 100))
-        const response = await axios.get<UserData>(
-          `${import.meta.env.VITE_BASE_URL}/sample/user`,
-        )
-        const user = response.data
+        const user = await getUserData()
         setUserData(user)
       } catch (error) {
         console.error('요청 실패:', error)
