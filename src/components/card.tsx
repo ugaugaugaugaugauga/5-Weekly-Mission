@@ -18,7 +18,7 @@ export const Card = ({ id, content, url, createdAt }: Props) => {
           <div className='overflow-hidden aspect-video rounded-t-xl flex items-center justify-center'>
             <img
               src={url}
-              className='group-hover:scale-125 transition duration-300 object-cover object-center'
+              className='w-full h-full object-cover object-center group-hover:scale-125 transition duration-300 '
             />
           </div>
         ) : (
