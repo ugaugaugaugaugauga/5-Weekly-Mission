@@ -10,9 +10,11 @@ type Props = {
   createdAt: string
 }
 
-export const Card = ({ id, content, url, createdAt }: Props) => {
+export const ShardCard = ({ id, content, url, createdAt }: Props) => {
+  const timeDifference = getTimeDifference(createdAt)
+  const date = formatDate(createdAt)
   return (
-    <Link to={`/link/${id}`}>
+    <Link to={`/links/${id}`}>
       <article className='group transition flex flex-col rounded-xl shadow-lg cursor-pointer'>
         {url ? (
           <div className='overflow-hidden aspect-video rounded-t-xl flex items-center justify-center'>
@@ -27,11 +29,9 @@ export const Card = ({ id, content, url, createdAt }: Props) => {
           </div>
         )}
         <div className='p-5 space-y-3'>
-          <div className='text-sm text-muted-foreground'>
-            {getTimeDifference(createdAt)}
-          </div>
-          <p className='line-clamp-2 font-semibold'>{content}</p>
-          <div className='text-sm'>{formatDate(createdAt)}</div>
+          <div className='text-sm text-muted-foreground'>{timeDifference}</div>
+          <p className='line-clamp-2 font-semibold min-h-[3rem]'>{content}</p>
+          <div className='text-sm'>{date}</div>
         </div>
       </article>
     </Link>
