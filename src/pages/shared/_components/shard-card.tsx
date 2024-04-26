@@ -1,5 +1,5 @@
-import { formatDate, getTimeDifference } from '@/lib/date'
 import { Skeleton } from '@/components/ui/skeleton'
+import { formatDate, getTimeDifference } from '@/lib/date'
 import { ImageOff } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -38,7 +38,7 @@ export const ShardCard = ({ id, content, url, createdAt }: Props) => {
   )
 }
 
-export function SkeletonCard() {
+ShardCard.Skeleton = () => {
   return (
     <div className='flex flex-col space-y-3'>
       <Skeleton className='aspect-video' />

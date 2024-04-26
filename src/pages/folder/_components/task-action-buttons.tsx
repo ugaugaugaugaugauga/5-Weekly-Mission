@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Share, Pencil, Trash } from 'lucide-react'
 
-const ActionButtonGroup = () => {
+const TaskActionButtons = () => {
   return (
     <div className='space-x-2 text-xs text-gray-400'>
       <Button variant='ghost' size='sm' className='px-0'>
@@ -20,4 +20,4 @@ const ActionButtonGroup = () => {
   )
 }
 
-export default ActionButtonGroup
+export default TaskActionButtons

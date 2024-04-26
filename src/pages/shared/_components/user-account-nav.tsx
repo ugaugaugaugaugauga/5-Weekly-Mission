@@ -1,17 +1,17 @@
 import { Button } from '@/components/ui/button'
 import { UserIcon } from '@/components/user-icon'
-import { UserData } from '@/data/users'
+import { UserData } from '@/model'
 
 type Props = {
-  userData: UserData | undefined
+  userData: UserData[] | undefined
 }
 
 export const UserAccountNav = ({ userData }: Props) => {
   if (userData) {
     return (
       <>
-        <UserIcon url={userData.data[0].image_source} />
-        <p className='ml-3'>{userData.data[0].email}</p>
+        <UserIcon url={userData[0].image_source} />
+        <p className='ml-3'>{userData[0].email}</p>
       </>
     )
   }

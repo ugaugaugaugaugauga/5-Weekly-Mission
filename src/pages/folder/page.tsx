@@ -1,30 +1,24 @@
-import { HeroWrapper } from '@/components/hero-warpper'
-import { LinkSearchBar } from './_components/link-search-bar'
 import { FeedWrapper } from '@/components/feed-wrapper'
 import { SearchBar } from '@/components/search-bar'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 import { Loader, PlusIcon } from 'lucide-react'
 import LinkCategoryButton from './_components/link-category-button'
-import {
-  Categories,
-  UserLinks,
-  getUserCategories,
-  getUserLinks,
-} from '@/data/users'
+import { getUserCategories, getUserLinks } from '@/data/users'
 import { Skeleton } from '@/components/ui/skeleton'
-import ActionButtonGroup from './_components/action-button-group'
+import TaskActionButtons from './_components/task-action-buttons'
 import { CardWrapper } from '@/components/card-wrapper'
 import { FolderCard } from '@/pages/folder/_components/folder-card'
-import { SkeletonCard } from '@/pages/shared/_components/shard-card'
 import { toast } from 'sonner'
+import { Hero } from './_components/hero'
+import { Category, UserLink } from '@/model'
 
 const FolderPage = () => {
   const allCategories = '전체'
   const [selectedCategory, setSelectedCategory] = useState(allCategories)
   const [isLoading, setIsLoading] = useState(true)
-  const [categories, setCategories] = useState<Categories>()
-  const [links, setLinks] = useState<UserLinks>()
+  const [categories, setCategories] = useState<Category[]>()
+  const [links, setLinks] = useState<UserLink[]>()
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category)
@@ -51,9 +45,7 @@ const FolderPage = () => {
 
   return (
     <main className='py-20'>
-      <HeroWrapper>
-        <LinkSearchBar />
-      </HeroWrapper>
+      <Hero />
       <FeedWrapper>
         <SearchBar />
         <div className='my-5 flex justify-between'>
@@ -71,7 +63,7 @@ const FolderPage = () => {
                   selectedCategory={selectedCategory}
                   onClick={() => handleCategoryClick(allCategories)}
                 />
-                {categories.data.map((category) => (
+                {categories.map((category) => (
                   <LinkCategoryButton
                     key={category.id}
                     category={category.name}
@@ -99,7 +91,7 @@ const FolderPage = () => {
             categories && (
               <>
                 <h2 className='font-bold text-2xl'>{selectedCategory}</h2>
-                {selectedCategory !== allCategories && <ActionButtonGroup />}
+                {selectedCategory !== allCategories && <TaskActionButtons />}
               </>
             )
           )}
@@ -107,10 +99,10 @@ const FolderPage = () => {
         <CardWrapper>
           {isLoading ? (
             Array.from({ length: 3 }).map((_, index) => (
-              <SkeletonCard key={index} />
+              <FolderCard.Skeleton key={index} />
             ))
           ) : links && selectedCategory === allCategories ? (
-            links.data.map((link) => (
+            links.map((link) => (
               <FolderCard
                 key={link.id}
                 id={link.id}

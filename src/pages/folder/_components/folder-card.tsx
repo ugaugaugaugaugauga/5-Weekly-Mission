@@ -14,11 +14,11 @@ export const FolderCard = ({ id, url, content, createdAt }: Props) => {
   const timeDifference = getTimeDifference(createdAt)
   const date = formatDate(createdAt)
 
-  const onStarClick = (event: React.MouseEvent) => {
+  const addFavorites = (event: React.MouseEvent) => {
     event.preventDefault()
   }
 
-  const onKebabClick = (event: React.MouseEvent) => {
+  const showOptions = (event: React.MouseEvent) => {
     event.preventDefault()
   }
 
@@ -40,7 +40,7 @@ export const FolderCard = ({ id, url, content, createdAt }: Props) => {
 
           <Star
             type='button'
-            onClick={onStarClick}
+            onClick={addFavorites}
             className='absolute top-4 right-3 text-gray-500 hover:text-gray-700'
           />
         </div>
@@ -49,8 +49,9 @@ export const FolderCard = ({ id, url, content, createdAt }: Props) => {
             <div className='text-sm text-muted-foreground'>
               {timeDifference}
             </div>
+            {/* Ellipsis 은 RucideIcons의 Icon입니다. */}
             <Ellipsis
-              onClick={onKebabClick}
+              onClick={showOptions}
               className='h-5 w-5 text-gray-500 hover:text-gray-800'
             />
           </div>
@@ -62,9 +63,7 @@ export const FolderCard = ({ id, url, content, createdAt }: Props) => {
   )
 }
 
-export default FolderCard
-
-export function SkeletonCard() {
+FolderCard.Skeleton = () => {
   return (
     <div className='flex flex-col space-y-3'>
       <Skeleton className='aspect-video' />

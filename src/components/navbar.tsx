@@ -1,13 +1,14 @@
 import { Loader } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-import { UserData, getUserData } from '@/data/users'
+import { getUserData } from '@/data/users'
 import { toast } from 'sonner'
 import { UserAccountNav } from '../pages/shared/_components/user-account-nav'
 import { Link } from 'react-router-dom'
+import { UserData } from '@/model'
 
 export const Navbar = () => {
-  const [userData, setUserData] = useState<UserData>()
+  const [userData, setUserData] = useState<UserData[] | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
@@ -15,10 +16,11 @@ export const Navbar = () => {
       try {
         setIsLoading(true)
         const user = await getUserData()
+        console.log(user)
         setUserData(user)
       } catch (error) {
         console.error('요청 실패:', error)
-        toast.error('데이터 요청에 실패하였습니다.')
+        toast.error('사용자 정보를 불러오지 못했습니다.')
       } finally {
         setIsLoading(false)
       }
@@ -34,7 +36,7 @@ export const Navbar = () => {
 
       <div className='flex items-center'>
         {isLoading && <Loader className='animate-spin' />}
-        {!isLoading && <UserAccountNav userData={userData} />}
+        {!isLoading && userData && <UserAccountNav userData={userData} />}
       </div>
     </nav>
   )

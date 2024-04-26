@@ -1,5 +1,5 @@
+import { Link } from '@/model'
 import { ShardCard } from '@/pages/shared/_components/shard-card'
-import { Link } from '@/data/folders'
 
 type Props = {
   links: Link[]
