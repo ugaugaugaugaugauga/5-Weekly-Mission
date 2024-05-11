@@ -2,7 +2,7 @@
 
 import { formatDate, getTimeDifference } from '@/lib/utils'
 import { ImageOff, PlusIcon, Star } from 'lucide-react'
-import { ActionableDropdownMenu } from './actionable-dropdown-menu'
+import ActionableDropdownMenu from './actionable-dropdown-menu'
 import Link from 'next/link'
 
 type Props = {

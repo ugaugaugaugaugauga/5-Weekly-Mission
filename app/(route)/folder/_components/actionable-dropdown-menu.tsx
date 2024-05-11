@@ -23,7 +23,7 @@ type Props = {
   title: string
 }
 
-export const ActionableDropdownMenu = ({ title }: Props) => {
+const ActionableDropdownMenu = ({ title }: Props) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className='outline-none '>
@@ -81,3 +81,5 @@ export const ActionableDropdownMenu = ({ title }: Props) => {
     </DropdownMenu>
   )
 }
+
+export default ActionableDropdownMenu
