@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const instance = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: 'https://bootcamp-api.codeit.kr/api',
 })
 
 export function formatDate(timestamp: string): string {
